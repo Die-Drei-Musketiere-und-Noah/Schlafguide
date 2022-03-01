@@ -21,3 +21,7 @@ jobs:
           repository-name: tinvol/tinvol.github.io
           branch: gh-pages
           folder: src
+          git-config-name: actions
+          git-config-email: actions@github.com
+          commit-message: auto commit by github actions
+          clean: true
