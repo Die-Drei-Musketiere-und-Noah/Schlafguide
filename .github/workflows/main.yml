@@ -20,4 +20,4 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
           repository-name: tinvol/tinvol.github.io
           branch: gh-pages
-          folder: .
+          folder: src
