@@ -1,0 +1,79 @@
+:root {
+    --background: rgb(255, 250, 240);
+    --nav-bg-color: rgb(157, 177, 180);
+    --btn1-hover-bg-color: rgb(49, 55, 56);
+    --btn1-font-size: 2em;
+    --btn1-color: black;
+    --btn1-hover-color: white;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+#nav-con {
+    background-color:  var(--nav-bg-color);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content {
+    padding-top: 6em;
+}
+
+.burger-menu {
+    display: none;
+    width: 1em;
+    height: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.burger-menu-line {
+    height: .2em;
+    width: 100%;
+    background-color: black;
+}
+
+.btn1, .burger-menu {
+    padding: .5em;
+    height: 100%;
+    color: var(--btn1-color);
+    transition: ease 0.5s;
+    font-size: var(--btn1-font-size);
+}
+
+.btn1:hover, .burger-menu:hover {
+    cursor: pointer;
+    background-color: var(--btn1-hover-bg-color);
+    color: var(--btn1-hover-color);
+}
+
+@media only screen and (max-aspect-ratio: 5/6) {
+    .btn1 {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+  }
