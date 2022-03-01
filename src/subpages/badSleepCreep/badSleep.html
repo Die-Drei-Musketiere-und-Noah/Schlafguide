@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../../datei.png">
-    <link rel="stylesheet" href="../../globalStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
+    <link type="image/svg+xml" rel="icon" href="../../favicon.svg">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../../globalStyle.css">
+    <link type="text/css" rel="stylesheet" href="badSleepStyle.css">
+    <!-- javascript -->
+    <script src="badSleepJS.js"></script>
 </head>
 
 <body>
 
     <header>
+
         <nav id="nav-con">
             
-            <div class="burger-menu">
+            <div id="burger-menu-con" class="flex-center header-transition" role="navigation" aria-label="mobile navigation">
                 <div class="burger-menu-line"></div>
                 <div class="burger-menu-line"></div>
                 <div class="burger-menu-line"></div>
             </div>
-            <a class="btn1" href="#">Home</a>
-            <a class="btn1" href="#">About</a>
-            <a class="btn1" href="#">Blog</a>
-            <a class="btn1" href="#">Contact</a>
+
+            <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
+                <a class="btn1" href="../../index.html" role="menuitem">Home</a>
+                <a class="btn1" href="#" role="menuitem">About</a>
+                <a class="btn1" href="#" role="menuitem">Bad Sleep</a>
+                <a class="btn1" href="#" role="menuitem">Contact</a>
+            </div>
+
         </nav>
+    
     </header>
 
-    <main id="content">
-        <div id="container">
-            test
-        </div>
+    <main id="content" role="main" aria-label="main content">
+        bad sleep
     </main>
 
     <footer>

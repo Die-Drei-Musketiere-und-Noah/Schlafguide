@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="favicon.svg">
-    <link rel="stylesheet" href="globalStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon -->
+    <link type="image/svg+xml" rel="icon" href="favicon.svg">
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="globalStyle.css">
 </head>
 
 <body>
 
     <header>
 
-        <nav id="nav-con" >
+        <nav id="nav-con">
             
-            <div id="burger-menu-con" class="flex-center header-transition">
+            <div id="burger-menu-con" class="flex-center header-transition" role="navigation" aria-label="mobile navigation">
                 <div class="burger-menu-line"></div>
                 <div class="burger-menu-line"></div>
                 <div class="burger-menu-line"></div>
             </div>
 
-            <div id="links" class="header-transition">
-                <a class="btn1" href="#">Home</a>
-                <a class="btn1" href="#">About</a>
-                <a class="btn1" href="#">Blog</a>
-                <a class="btn1" href="#">Contact</a>
+            <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
+                <a class="btn1" href="#" role="menuitem">Home</a>
+                <a class="btn1" href="#" role="menuitem">About</a>
+                <a class="btn1" href="subpages/badSleepCreep/badSleep.html" role="menuitem">Bad Sleep</a>
+                <a class="btn1" href="#" role="menuitem">Contact</a>
             </div>
-
-
 
         </nav>
-        
     
     </header>
 
-    <main id="content">
-        
+    <main id="content" role="main" aria-label="main content">
+        index
     </main>
 
     <footer>

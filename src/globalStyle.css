@@ -31,7 +31,8 @@ a {
 }
 
 header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color:  var(--nav-bg-color);
 }
@@ -46,17 +47,17 @@ header {
     position: relative;
 }
 
-#content {
-    padding-top: 6em;
-}
-
 #burger-menu-con {
     position: absolute;
     width: var(--burger-menu-size);
     height: var(--burger-menu-size);
     flex-wrap: wrap;
-    margin: .5em;
+    padding: .5em;
     transform: translateX(-100vw);
+}
+
+#content {
+    margin-top: .5em;
 }
 
 .flex-center {
