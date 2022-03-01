@@ -1,10 +1,18 @@
 :root {
+    /* general */
     --background: rgb(255, 250, 240);
+
+    /* navigation */
     --nav-bg-color: rgb(157, 177, 180);
+
+    /* buttons */
     --btn1-hover-bg-color: rgb(49, 55, 56);
     --btn1-font-size: 2em;
     --btn1-color: black;
     --btn1-hover-color: white;
+
+    /* burger menu */
+    --burger-menu-size: 3.5em;
 }
 
 html {
@@ -25,41 +33,58 @@ a {
 header {
     position: fixed;
     width: 100%;
+    background-color:  var(--nav-bg-color);
 }
 
-#nav-con {
-    background-color:  var(--nav-bg-color);
+#links {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    font-size: var(--btn1-font-size);
+    position: relative;
 }
 
 #content {
     padding-top: 6em;
 }
 
-.burger-menu {
-    display: none;
-    width: 1em;
-    height: 2em;
-    justify-content: center;
+#burger-menu-con {
+    position: absolute;
+    width: var(--burger-menu-size);
+    height: var(--burger-menu-size);
     flex-wrap: wrap;
+    margin: .5em;
+    transform: translateX(-100vw);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-transition {
+    transition: .2s ease;
 }
 
 .burger-menu-line {
-    height: .2em;
-    width: 100%;
+    height: calc(var(--burger-menu-size)/10);
+    width: var(--burger-menu-size);
     background-color: black;
+    border-radius: 999px;
 }
 
-.btn1, .burger-menu {
+.burger-menu-line:nth-child(2) {
+    width: calc(var(--burger-menu-size) - 0.75em);
+}
+
+.btn1 {
     padding: .5em;
     height: 100%;
     color: var(--btn1-color);
-    transition: ease 0.5s;
-    font-size: var(--btn1-font-size);
+    
 }
 
 .btn1:hover, .burger-menu:hover {
@@ -68,12 +93,18 @@ header {
     color: var(--btn1-hover-color);
 }
 
+/* media query to make header responsive */
 @media only screen and (max-aspect-ratio: 5/6) {
-    .btn1 {
-        display: none;
+    #links {
+        transform: translateY(-100vh);
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
-    .burger-menu {
-        display: flex;
+    #burger-menu-con {
+        position: relative;
+        transform: translateX(0);
+
     }
   }
