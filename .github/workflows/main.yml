@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: supremeMeme2
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
