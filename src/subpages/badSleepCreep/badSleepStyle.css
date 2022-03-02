@@ -28,6 +28,7 @@ h1 {
     max-width: 50%;
     border-radius: .5em;
     margin-left: 1em;
+    margin-bottom: 1em;
 }
 
 /* media query to make content view responsive */
