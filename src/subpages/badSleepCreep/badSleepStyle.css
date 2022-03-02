@@ -4,7 +4,7 @@
 
 img {
     width: 25vw;
-    min-width: 250px !important;
+    min-width: 200px !important;
     max-width: 600px !important;
 }
 
@@ -32,7 +32,6 @@ h1 {
 /* media query to make content view responsive */
 @media only screen and (max-aspect-ratio: 5/6) {
     #content {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
+        margin: 0.5em
     }
 }
