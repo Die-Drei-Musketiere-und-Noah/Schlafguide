@@ -9,7 +9,8 @@ img {
 }
 
 p {
-    transition: var(--content-transition)
+    transition: var(--content-transition);
+    overflow-wrap: break-word;
 }
 
 h1 {
