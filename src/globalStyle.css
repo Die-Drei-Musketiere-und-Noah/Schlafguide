@@ -57,7 +57,7 @@ header {
 }
 
 #content {
-    margin-top: .5em;
+    margin: 2em;
 }
 
 .flex-center {
@@ -108,4 +108,4 @@ header {
         transform: translateX(0);
 
     }
-  }
+}
