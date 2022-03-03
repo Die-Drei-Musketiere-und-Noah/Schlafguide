@@ -60,6 +60,10 @@ header {
     display: flex;
 }
 
+input {
+     /*Hack for Firefox Browsers*/
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -85,7 +89,7 @@ header {
 
 #burger-menu {
     transition: transform 0.5s;
-    height: calc(var(--burger-menu-size)/10);
+    height: calc(var(--burger-menu-size) / 10);
     width: calc(var(--burger-menu-size) - 0.5em);
     background-color: black;
     border-radius: 9999px;
@@ -94,9 +98,9 @@ header {
 #burger-menu div::before {
     content: '';
     display: block;
-    height: calc(var(--burger-menu-size)/10);
+    height: calc(var(--burger-menu-size) / 10);
     width: var(--burger-menu-size);
-    transform: translateX(calc(calc(var(--burger-menu-size)/10)*-1));
+    transform: translateX(calc(calc(var(--burger-menu-size)/10) * -1));
     background-color: black;
     border-radius: 9999px;
     transition: transform 0.5s;
@@ -107,7 +111,7 @@ header {
     height: 100%;
     width: 100%;
     transition: transform 0.5s 0.5s;
-    transform: translateY(calc(var(--burger-menu-size)-0.75em));
+    transform: translateY(calc(var(--burger-menu-size) / 3));
 }
 
 #burger-menu-background {
@@ -138,7 +142,7 @@ header {
 }
   
 #burger-menu div:last-child {
-    transform: translateY(calc(calc(var(--burger-menu-size)-0.75em)*-1));
+    transform: translateY(calc(calc(var(--burger-menu-size) / 3) * -1));
 }
 
 #burger-menu-checkbox:checked ~ #burger-menu-bg {
@@ -156,7 +160,7 @@ header {
 }
 
 #burger-menu-checkbox:checked ~ #burger-menu div:last-child::before {
-    transform: rotate(90deg) translateY(calc(var(--burger-menu-size)/10));
+    transform: rotate(90deg) translateY(calc(var(--burger-menu-size) / 10));
     transition: transform 0.5s 0.5s;
 }
 
