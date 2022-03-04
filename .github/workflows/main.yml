@@ -1,0 +1,27 @@
+name: deploy tinvol.github.io website
+on:
+  push:
+    branches: [ supremeMeme2 ]
+jobs:
+  deploy_to_githubio:
+    concurrency: 
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: supremeMeme2
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository-name: tinvol/tinvol.github.io
+          branch: gh-pages
+          folder: src
+          git-config-name: actions
+          git-config-email: actions@github.com
+          commit-message: auto commit by github actions
+          clean: true

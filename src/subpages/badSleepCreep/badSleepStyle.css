@@ -1,0 +1,39 @@
+:root {
+    --content-transition: ease .5s;
+}
+
+img {
+    width: 25vw;
+    min-width: 200px !important;
+    max-width: 600px !important;
+}
+
+p {
+    transition: var(--content-transition);
+    overflow-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    transition: var(--content-transition)
+}
+
+#no-sleep-img {
+    float: right;
+    max-width: 50%;
+    border-radius: .5em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+/* media query to make content view responsive */
+@media only screen and (max-aspect-ratio: 5/6) {
+    #content {
+        margin: 0.5em
+    }
+}
