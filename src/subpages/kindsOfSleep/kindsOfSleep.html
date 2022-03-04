@@ -8,124 +8,132 @@
     <link rel="stylesheet" href="css/kindsOfSleep.css">
     <link rel="stylesheet" href="../../globalStyle.css">
 </head>
-<body>
-    <header>
-        <nav id="nav-con">
+    <body>
+        <header>
+            <nav id="nav-con">
 
-            <div class="burger-menu">
-                <div class="burger-menu-line"></div>
-                <div class="burger-menu-line"></div>
-                <div class="burger-menu-line"></div>
+                <div class="burger-menu">
+                    <div class="burger-menu-line"></div>
+                    <div class="burger-menu-line"></div>
+                    <div class="burger-menu-line"></div>
+                </div>
+                <a class="btn1" href="#">Home</a>
+                <a class="btn1" href="#">About</a>
+                <a class="btn1" href="#">Blog</a>
+                <a class="btn1" href="#">Contact</a>
+            </nav>
+        </header>
+
+        <main id="content">
+            <div class="zoom">
+                <div class="slideshow">
+
+                    <div class="slide fade">
+                        <img src="img/einschlafen.jpg" alt="Bild von einem schlafenden Mann" style="width:100%">
+                        <div class="ueberschrift">Einschlafphase (Stadium N1)</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <p>In der Phase des Einschlafens ist der Schlaf sehr leicht und die Muskulatur zeigt noch ein gewisses
+                            Maß an Anspannung. Es können langsame, rollende Augenbewegungen beim Schlafenden festgestellt werden.
+                            Die im EEG messbare Gehirnaktivität wechselt von den sogenannten Alpha-Wellen der Wachphase zu Theta-Wellen,
+                            die eine langsamere Frequenz aufweisen.</p>
+                        <p class="quelle">- resmed-healthcare.de</p>
+                        <br><br>
+                        <p>Die Einschlafphase ist der Zeitraum, in dem aus Müdigkeit Schlaf wird. Sie dauert bei manchen
+                            weniger als fünf Minuten, kann aber auch 20–30 Minuten betragen. Beim Einschlafen kommt es manchmal
+                            zu Zuckungen, die ein Zeichen für die zunehmende Entspannung unseres Körpers sind.</p>
+                        <p class="quelle">- apotheken.de</p>
+
+                        <div class="ueberschrift">Definition</div>
+                    </div>
+
+                    <div class="slide fade">
+                        <iframe class="youtube" src="https://www.youtube.com/embed/8c2BqxwsuDw" title="Youtube Video zum Thema, warum zucken Muskeln beim Einschlafen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br>
+                        <br>
+                        <div class="ueberschrift">Youtube Video</div>
+                    </div>
+
+                    <a class="prevslide" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="nextslide" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
             </div>
-            <a class="btn1" href="#">Home</a>
-            <a class="btn1" href="#">About</a>
-            <a class="btn1" href="#">Blog</a>
-            <a class="btn1" href="#">Contact</a>
-        </nav>
-    </header>
+            <div class="zoom">
+                <div class="slideshow">
 
-    <main id="content">
-        <div class="zoom">
-            <div class="slideshow">
+                    <div class="slide2 fade">
+                        <img src="img/img_nature_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Leichter Schlaf (Stadium N2)</div>
+                    </div>
 
-                <div class="slide fade">
-                    <img src="img/schlafmaske.png" alt="Bild einer Schlafmaske" style="width:100%">
-                    <div class="text">Einschlafphase (Stadium N1)</div>
+                    <div class="slide2 fade">
+                        <img src="img/img_snow_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Caption Two</div>
+                    </div>
+
+                    <div class="slide2 fade">
+                        <img src="img/img_mountains_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Caption Three</div>
+                    </div>
+
+                    <a class="prevslide" onclick="plusSlides2(-1)">&#10094;</a>
+                    <a class="nextslide" onclick="plusSlides2(1)">&#10095;</a>
+
                 </div>
-
-                <div class="slide fade">
-                    <p>In der Phase des Einschlafens ist der Schlaf sehr leicht und die Muskulatur zeigt noch ein gewisses Maß an Anspannung. Es können langsame, rollende Augenbewegungen beim Schlafenden festgestellt werden. Die im EEG messbare Gehirnaktivität wechselt von den sogenannten Alpha-Wellen der Wachphase zu Theta-Wellen, die eine langsamere Frequenz aufweisen.<p>
-                    <br>
-                    <br>
-                    <div class="text">Definition</div>
-                </div>
-
-                <div class="slide fade">
-                    <iframe class="youtube" src="https://www.youtube.com/embed/8c2BqxwsuDw" title="Youtube Video zum Thema, warum zucken Muskeln beim Einschlafen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <br>
-                    <br>
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <a class="prevslide" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="nextslide" onclick="plusSlides(1)">&#10095;</a>
-
             </div>
-        </div>
-        <div class="zoom">
-            <div class="slideshow">
+            <div class="zoom">
+                <div class="slideshow">
 
-                <div class="slide2 fade">
-                    <img src="img/img_nature_wide.jpg" style="width:100%">
-                    <div class="text">Leichter Schlaf (Stadium N2)</div>
+                    <div class="slide3 fade">
+                        <img src="img/img_nature_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Tiefschlaf (Stadium N3)</div>
+                    </div>
+
+                    <div class="slide3 fade">
+                        <img src="img/img_snow_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Caption Two</div>
+                    </div>
+
+                    <div class="slide3 fade">
+                        <img src="img/img_mountains_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Caption Three</div>
+                    </div>
+
+                    <a class="prevslide" onclick="plusSlides3(-1)">&#10094;</a>
+                    <a class="nextslide" onclick="plusSlides3(1)">&#10095;</a>
+
                 </div>
-
-                <div class="slide2 fade">
-                    <img src="img/img_snow_wide.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="slide2 fade">
-                    <img src="img/img_mountains_wide.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <a class="prevslide" onclick="plusSlides2(-1)">&#10094;</a>
-                <a class="nextslide" onclick="plusSlides2(1)">&#10095;</a>
-
             </div>
-        </div>
-        <div class="zoom">
-            <div class="slideshow">
+            <div class="zoom">
+                <div class="slideshow">
 
-                <div class="slide3 fade">
-                    <img src="img/img_nature_wide.jpg" style="width:100%">
-                    <div class="text">Tiefschlaf (Stadium N3)</div>
+                    <div class="slide4 fade">
+                        <img src="img/img_nature_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Traumschlaf (REM-Schlaf)</div>
+                    </div>
+
+                    <div class="slide4 fade">
+                        <img src="img/img_snow_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Caption Two</div>
+                    </div>
+
+                    <div class="slide4 fade">
+                        <img src="img/img_mountains_wide.jpg" style="width:100%">
+                        <div class="ueberschrift">Caption Three</div>
+                    </div>
+
+                    <a class="prevslide" onclick="plusSlides4(-1)">&#10094;</a>
+                    <a class="nextslide" onclick="plusSlides4(1)">&#10095;</a>
+
                 </div>
-
-                <div class="slide3 fade">
-                    <img src="img/img_snow_wide.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="slide3 fade">
-                    <img src="img/img_mountains_wide.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <a class="prevslide" onclick="plusSlides3(-1)">&#10094;</a>
-                <a class="nextslide" onclick="plusSlides3(1)">&#10095;</a>
-
             </div>
-        </div>
-        <div class="zoom">
-            <div class="slideshow">
+            <script src="js/kindsOfSleep.js"></script>
+        </main>
 
-                <div class="slide4 fade">
-                    <img src="img/img_nature_wide.jpg" style="width:100%">
-                    <div class="text">Traumschlaf (REM-Schlaf)</div>
-                </div>
+        <footer>
 
-                <div class="slide4 fade">
-                    <img src="img/img_snow_wide.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
-                </div>
-
-                <div class="slide4 fade">
-                    <img src="img/img_mountains_wide.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <a class="prevslide" onclick="plusSlides4(-1)">&#10094;</a>
-                <a class="nextslide" onclick="plusSlides4(1)">&#10095;</a>
-
-            </div>
-        </div>
-        <script src="js/kindsOfSleep.js"></script>
-    </main>
-
-    <footer>
-
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
