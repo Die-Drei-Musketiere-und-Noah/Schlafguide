@@ -17,6 +17,7 @@
     margin: auto;
     position: relative;
     max-width: 1000px;
+    aspect-ratio: 16/9;
 }
 
 .youtube{
@@ -41,11 +42,17 @@
 }
 
 .nextslide:hover,.prevslide:hover{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(224, 224, 224, 0.8);
 }
 
 img{
-    max-height: 350px;
+    max-height: 500px;
+
+}
+
+.quelle{
+    color: blue;
+    font-style: italic;
 }
 
 .slide, .slide2, .slide3, .slide4{
@@ -69,11 +76,12 @@ img{
     user-select: none;
 }
 
-.text {
+.ueberschrift {
     color: #000000;
     font-size: 15px;
     position: absolute;
     bottom: 8px;
+    font-weight: bold;
     width: 100%;
 }
 

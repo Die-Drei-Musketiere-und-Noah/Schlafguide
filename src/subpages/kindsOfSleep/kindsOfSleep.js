@@ -1,7 +1,7 @@
-var slideIndex = 1;
-var slideIndex2 = 1;
-var slideIndex3 = 1;
-var slideIndex4 = 1;
+let slideIndex = 1;
+let slideIndex2 = 1;
+let slideIndex3 = 1;
+let slideIndex4 = 1;
 showSlides(slideIndex);
 showSlides2(slideIndex2);
 showSlides3(slideIndex3);
@@ -18,8 +18,8 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide");
+    let i;
+    let slides = document.getElementsByClassName("slide");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -41,8 +41,8 @@ function currentSlide2(n) {
 }
 
 function showSlides2(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide2");
+    let i;
+    let slides = document.getElementsByClassName("slide2");
     if (n > slides.length) {slideIndex2 = 1}
     if (n < 1) {slideIndex2 = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -63,8 +63,8 @@ function currentSlide3(n) {
 }
 
 function showSlides3(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide3");
+    let i;
+    let slides = document.getElementsByClassName("slide3");
     if (n > slides.length) {slideIndex3 = 1}
     if (n < 1) {slideIndex3 = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -85,8 +85,8 @@ function currentSlide4(n) {
 }
 
 function showSlides4(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide4");
+    let i;
+    let slides = document.getElementsByClassName("slide4");
     if (n > slides.length) {slideIndex4 = 1}
     if (n < 1) {slideIndex4 = slides.length}
     for (i = 0; i < slides.length; i++) {
