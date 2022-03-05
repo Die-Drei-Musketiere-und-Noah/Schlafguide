@@ -123,8 +123,6 @@ header {
     width: 100%;
     z-index: -100;
     border-radius: 0;
-
-    
 }
 
 #burger-menu-checkbox:checked ~ #burger-menu-background {
