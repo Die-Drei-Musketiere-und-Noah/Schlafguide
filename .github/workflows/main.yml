@@ -1,7 +1,7 @@
 name: deploy tinvol.github.io website
 on:
   push:
-    branches: [ supremeMeme2 ]
+    branches: [ main ]
 jobs:
   deploy_to_githubio:
     concurrency: 
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: supremeMeme2
+          ref: main
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
