@@ -15,14 +15,13 @@ $.getJSON('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/ser
             moonphase.push(data.days[date].moonphase)
         }
         myChart = new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
                 labels: days,
                 datasets: [
                     {
-                        backgroundColor: 'rgba(248,255,0,0.36)',
-                        label: 'Mond Phase',
-                        borderColor: 'rgb(255,255,0)',
+                        backgroundColor: 'rgb(0,0,255)',
+                        label: 'Sicht auf Mond',
                         data: moonphase
                     }
                 ]
