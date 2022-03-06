@@ -1,149 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="datei.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon -->
+    <link type="image/svg+xml" rel="icon" href="../../favicon.svg">
+
+    <!-- css -->
+
     <link rel="stylesheet" href="kindsOfSleep.css">
     <link rel="stylesheet" href="../../globalStyle.css">
+
 </head>
-    <body>
-        <header>
-            <nav id="nav-con">
+<body>
+<header>
+    <nav id="nav-con">
 
-                <label id="burger-menu-con" class="header-transition flex-center" role="navigation" aria-label="mobile navigation">
-                    <input id="burger-menu-checkbox" type="checkbox">
-                    <div id="burger-menu">
-                        <div></div>
-                        <div></div>
-                    </div>
-
-                    <div id="burger-menu-background">
-                    </div>
-
-                </label>
-
-                <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
-                    <a class="btn1" href="#" role="menuitem">Home</a>
-                    <a class="btn1" href="#" role="menuitem">About</a>
-                    <a class="btn1" href="../badSleepCreep/badSleep.html" role="menuitem">Bad Sleep</a>
-                    <a class="btn1" href="#" role="menuitem">Contact</a>
-                </div>
-
-            </nav>
-        </header>
-
-        <main id="content">
-            <div class="zoom">
-                <div class="slideshow">
-
-                    <div class="slide fade">
-                        <img src="img/einschlafen.jpg" alt="Bild von einem schlafenden Mann" style="width:100%">
-                        <div class="ueberschrift">Einschlafphase (Stadium N1)</div>
-                    </div>
-
-                    <div class="slide fade">
-                        <p>In der Phase des Einschlafens ist der Schlaf sehr leicht und die Muskulatur zeigt noch ein gewisses
-                            Maß an Anspannung. Es können langsame, rollende Augenbewegungen beim Schlafenden festgestellt werden.
-                            Die im EEG messbare Gehirnaktivität wechselt von den sogenannten Alpha-Wellen der Wachphase zu Theta-Wellen,
-                            die eine langsamere Frequenz aufweisen.</p>
-                        <p class="quelle">- resmed-healthcare.de</p>
-                        <br><br>
-                        <p>Die Einschlafphase ist der Zeitraum, in dem aus Müdigkeit Schlaf wird. Sie dauert bei manchen
-                            weniger als fünf Minuten, kann aber auch 20–30 Minuten betragen. Beim Einschlafen kommt es manchmal
-                            zu Zuckungen, die ein Zeichen für die zunehmende Entspannung unseres Körpers sind.</p>
-                        <p class="quelle">- apotheken.de</p>
-
-                        <div class="ueberschrift">Definition</div>
-                    </div>
-
-                    <div class="slide fade">
-                        <iframe class="youtube" src="https://www.youtube.com/embed/8c2BqxwsuDw" title="Youtube Video zum Thema, warum zucken Muskeln beim Einschlafen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <br>
-                        <br>
-                        <div class="ueberschrift">Youtube Video</div>
-                    </div>
-
-                    <a class="prevslide" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="nextslide" onclick="plusSlides(1)">&#10095;</a>
-
-                </div>
+        <label id="burger-menu-con" class="header-transition flex-center" role="navigation"
+               aria-label="mobile navigation">
+            <input id="burger-menu-checkbox" type="checkbox">
+            <div id="burger-menu">
+                <div></div>
+                <div></div>
             </div>
-            <div class="zoom">
-                <div class="slideshow">
 
-                    <div class="slide2 fade">
-                        <img src="img/img_nature_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Leichter Schlaf (Stadium N2)</div>
-                    </div>
-
-                    <div class="slide2 fade">
-                        <img src="img/img_snow_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Caption Two</div>
-                    </div>
-
-                    <div class="slide2 fade">
-                        <img src="img/img_mountains_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Caption Three</div>
-                    </div>
-
-                    <a class="prevslide" onclick="plusSlides2(-1)">&#10094;</a>
-                    <a class="nextslide" onclick="plusSlides2(1)">&#10095;</a>
-
-                </div>
+            <div id="burger-menu-background">
             </div>
-            <div class="zoom">
-                <div class="slideshow">
 
-                    <div class="slide3 fade">
-                        <img src="img/img_nature_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Tiefschlaf (Stadium N3)</div>
-                    </div>
+        </label>
 
-                    <div class="slide3 fade">
-                        <img src="img/img_snow_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Caption Two</div>
-                    </div>
+        <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
+            <a class="btn1" href="#" role="menuitem">Home</a>
+            <a class="btn1" href="#" role="menuitem">About</a>
+            <a class="btn1" href="../badSleepCreep/badSleep.html" role="menuitem">Bad Sleep</a>
+            <a class="btn1" href="#" role="menuitem">Contact</a>
+        </div>
 
-                    <div class="slide3 fade">
-                        <img src="img/img_mountains_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Caption Three</div>
-                    </div>
+    </nav>
+</header>
 
-                    <a class="prevslide" onclick="plusSlides3(-1)">&#10094;</a>
-                    <a class="nextslide" onclick="plusSlides3(1)">&#10095;</a>
+<main id="content">
+    <div class="zoom">
+        <div class="slideshow">
 
-                </div>
+            <div class="slide fade">
+                <img src="img/woman-female-bed-wake.jpg" alt="Bild von einer einschlafenden Frau" style="width:100%">
+                <div class="ueberschrift">Einschlafphase (Stadium N1)</div>
             </div>
-            <div class="zoom">
-                <div class="slideshow">
 
-                    <div class="slide4 fade">
-                        <img src="img/img_nature_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Traumschlaf (REM-Schlaf)</div>
-                    </div>
+            <div class="slide fade">
+                <p>In der Phase des Einschlafens ist der Schlaf sehr leicht und die Muskulatur zeigt noch ein gewisses
+                    Maß an Anspannung. Es können langsame, rollende Augenbewegungen beim Schlafenden festgestellt
+                    werden.
+                    Die im EEG messbare Gehirnaktivität wechselt von den sogenannten Alpha-Wellen der Wachphase zu
+                    Theta-Wellen,
+                    die eine langsamere Frequenz aufweisen.</p>
+                <a class="quelle" href="https://www.resmed-healthcare.de/patienten/die-schlafphasen-des-menschen">
+                    - resmed-healthcare.de</a>
+                <br><br>
+                <p>Die Einschlafphase ist der Zeitraum, in dem aus Müdigkeit Schlaf wird. Sie dauert bei manchen
+                    weniger als fünf Minuten, kann aber auch 20–30 Minuten betragen. Beim Einschlafen kommt es manchmal
+                    zu Zuckungen, die ein Zeichen für die zunehmende Entspannung unseres Körpers sind.</p>
+                <a class="quelle"
+                   href="https://www.apotheken.de/krankheiten/hintergrundwissen/10579-die-schlafphasen#:~:text=Die%20Einschlafphase%20ist%20der%20Zeitraum,zunehmende%20Entspannung%20unseres%20K%C3%B6rpers%20sind.">
+                    - apotheken.de</a>
 
-                    <div class="slide4 fade">
-                        <img src="img/img_snow_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Caption Two</div>
-                    </div>
-
-                    <div class="slide4 fade">
-                        <img src="img/img_mountains_wide.jpg" style="width:100%">
-                        <div class="ueberschrift">Caption Three</div>
-                    </div>
-
-                    <a class="prevslide" onclick="plusSlides4(-1)">&#10094;</a>
-                    <a class="nextslide" onclick="plusSlides4(1)">&#10095;</a>
-
-                </div>
+                <div class="ueberschrift">Definition</div>
             </div>
-            <script src="kindsOfSleep.js"></script>
-        </main>
 
-        <footer>
+            <div class="slide fade">
+                <iframe class="youtube" src="https://www.youtube.com/embed/8c2BqxwsuDw"
+                        title="Youtube Video zum Thema, warum zucken Muskeln beim Einschlafen" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <br>
+                <br>
+                <div class="ueberschrift">Youtube Video</div>
+            </div>
 
-        </footer>
-    </body>
+            <a class="prevslide" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="nextslide" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </div>
+    <div class="zoom">
+        <div class="slideshow">
+
+            <div class="slide2 fade">
+                <img src="img/images.png" style="width:100%"
+                     alt="Karikatur von einem skizierten Mann der an seinem Pc schläft">
+                <div class="ueberschrift">Leichter Schlaf (Stadium N2)</div>
+            </div>
+
+            <div class="slide2 fade">
+                <p>Die Einschlafphase geht unmittelbar in die Leichtschlafphase über. In dieser Schlafphase kommt unser
+                    Körper noch weiter zur Ruhe: Unser Puls bzw. unsere Herzfrequenz verlangsamt sich ebenso wie unsere
+                    Atmung, die tiefer und entspannter wird. Zusätzlich sinkt unsere Körpertemperatur leicht ab.</p>
+
+                <p> Die Leichtschlafphase nimmt in unseren etwa 90-minütigen Schlafzyklus jeweils ca. 30 bis 60 Minuten
+                    ein: Somit befinden wir uns die Hälfte oder sogar etwas mehr als die Hälfte unseres Gesamtschlafs in
+                    dieser Schlafphase.</p>
+
+                <p> Bereits in der Leichtschlafphase beginnen wir mit der Verarbeitung des am Tag Erlebten. In der
+                    Leichtschlafphase ist unser Schlaf jedoch nach wie vor oberflächlich, so dass wir durch kleine Reize
+                    oder Störungen in dieser Phase noch immer recht schnell aufwachen</p>
+
+                <a class="quelle"
+                   href="https://www.derschlafraum.de/schlafberatung/blog/die-fuenf-schlafphasen-so-sieht-gesunder-schlaf-aus#:~:text=Schlafphase%3A%20Leichtschlafphase%20(Non%2DREM%2DPhase)&text=In%20dieser%20Schlafphase%20kommt%20unser,sinkt%20unsere%20K%C3%B6rpertemperatur%20leicht%20ab.">
+                    - derschlafraum.de</a>
+                <div class="ueberschrift">Definition</div>
+            </div>
+
+            <div class="slide2 fade">
+                <iframe class="youtube" src="https://www.youtube.com/embed/JTlDIu_PXlE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <br>
+                <br>
+                <div class="ueberschrift">Youtube Video</div>
+            </div>
+
+            <a class="prevslide" onclick="plusSlides2(-1)">&#10094;</a>
+            <a class="nextslide" onclick="plusSlides2(1)">&#10095;</a>
+
+        </div>
+    </div>
+    <div class="zoom">
+        <div class="slideshow">
+
+            <div class="slide3 fade">
+                <img src="img/tiefschlaf.jpg" style="width:100%" alt="Bild von einem Mann der tief schläft">
+                <div class="ueberschrift">Tiefschlaf (Stadium N3)</div>
+            </div>
+
+            <div class="slide3 fade">
+                <p>Im Tiefschlaf (Non-REM-Phasen III und IV) dominieren die Regenerationsmechanismen des Schlafs: Alle
+                    Körperfunktionen werden gedrosselt; die Körpertemperatur fällt. Puls und Atmung verlangsamen sich.
+                    Im Gegensatz zu REM-Phasen (siehe unten) sind die Augäpfel komplett ruhig – deshalb der Name
+                    Non-REM. Zugleich ist dies die Zeit der Zellreparatur. Wachstumshormone, die beim Zellaufbau eine
+                    wichtige Rolle spielen, verrichten jede Nacht unverzichtbare Reparaturarbeiten an den Geweben. Auch
+                    das Immunsystem ist jetzt besonders aktiv.</p>
+                <a class="quelle" href="https://www.apotheken.de/krankheiten/hintergrundwissen/10579-die-schlafphasen">
+                    - apotheken.de</a>
+                <div class="ueberschrift">Definition</div>
+            </div>
+
+            <div class="slide3 fade">
+                <iframe class="youtube" src="https://www.youtube.com/embed/mIynOehi3JE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <br>
+                <br>
+                <div class="ueberschrift">Youtube Video</div>
+            </div>
+
+            <a class="prevslide" onclick="plusSlides3(-1)">&#10094;</a>
+            <a class="nextslide" onclick="plusSlides3(1)">&#10095;</a>
+
+        </div>
+    </div>
+    <div class="zoom">
+        <div class="slideshow">
+
+            <div class="slide4 fade">
+                <img src="img/dream.jpg" style="width:100%" alt="Bild von einer Traumlandschaft">
+                <div class="ueberschrift">Traumschlaf (REM-Schlaf)</div>
+            </div>
+
+            <div class="slide4 fade">
+                <p>Die Abkürzung REM leitet sich von der Beschreibung "Rapid Eye Movement" ab, frei übersetzt also
+                    "schnelle Bewegungen der Augen". Gemeint sind damit die von außen sichtbaren Augenbewegungen, die
+                    der Schläfer unter den Lidern vollzieht. Sie treten nur in einem gewissen Stadium des Schlafs auf.
+                    Weckt man den Schlafenden genau in dieser Zeitspanne, berichtet er augenblicklich von intensiven
+                    Träumen und Erlebnissen.</p>
+
+                <p>Der REM-Schlaf wird auch als "Paradoxer Schlaf" bezeichnet. Das liegt daran, dass der Mensch viele
+                    Anzeichen einer wachen Person aufweist – nachweislich jedoch fest schläft. Der REM-Schlaf hat
+                    übrigens nichts mit dem Tiefschlaf zu tun</p>
+
+                <a class="quelle" href="https://www.betten.de/lexikon/rem-phase.html">- betten.de</a>
+                <div class="ueberschrift">Definition</div>
+            </div>
+
+            <div class="slide4 fade">
+                <iframe class="youtube" src="https://www.youtube.com/embed/IL8HTva0Qmg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <br>
+                <br>
+                <div class="ueberschrift">Youtube Video</div>
+            </div>
+
+            <a class="prevslide" onclick="plusSlides4(-1)">&#10094;</a>
+            <a class="nextslide" onclick="plusSlides4(1)">&#10095;</a>
+
+        </div>
+    </div>
+    <script src="kindsOfSleep.js"></script>
+</main>
+
+<footer>
+
+</footer>
+</body>
 </html>

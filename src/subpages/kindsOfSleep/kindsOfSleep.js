@@ -8,13 +8,9 @@ showSlides3(slideIndex3);
 showSlides4(slideIndex4);
 
 
-
+//First Row of Slides
 function plusSlides(n) {
     showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
@@ -29,15 +25,9 @@ function showSlides(n) {
 }
 
 
-
-
-
+//Second Row of Slides
 function plusSlides2(n) {
     showSlides2(slideIndex2 += n);
-}
-
-function currentSlide2(n) {
-    showSlides2(slideIndex2 = n);
 }
 
 function showSlides2(n) {
@@ -52,15 +42,11 @@ function showSlides2(n) {
 }
 
 
-
-
+//Third Row of Slides
 function plusSlides3(n) {
     showSlides3(slideIndex3 += n);
 }
 
-function currentSlide3(n) {
-    showSlides3(slideIndex3 = n);
-}
 
 function showSlides3(n) {
     let i;
@@ -74,15 +60,11 @@ function showSlides3(n) {
 }
 
 
-
-
+//Fourth Row of Slides
 function plusSlides4(n) {
     showSlides4(slideIndex4 += n);
 }
 
-function currentSlide4(n) {
-    showSlides4(slideIndex4 = n);
-}
 
 function showSlides4(n) {
     let i;
