@@ -1,3 +1,7 @@
+#content {
+    text-align: center;
+}
+
 #quiz {
     width: 100%;
 }
@@ -22,7 +26,7 @@
 .answer-label {
     cursor: pointer;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .answer-radio {
@@ -44,5 +48,5 @@ input {
 }
 
 input:checked ~ .answer-label > .answer-radio {
-    background-color: black;
+    background-color: var(--btn1-hover-bg-color);
 }

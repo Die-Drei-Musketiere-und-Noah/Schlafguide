@@ -18,13 +18,13 @@
 
 </head>
 
-<body>
+<body id="body" onresize="console.log('XD')">
 
     <header>
 
         <nav id="nav-con">
             
-            <label id="burger-menu-con" class="header-transition flex-center" role="navigation" aria-label="mobile navigation">
+            <label id="burger-menu-con" class="header-transition flex-center" aria-label="mobile navigation">
                 <input id="burger-menu-checkbox" type="checkbox">
                 <div id="burger-menu">
                     <div></div>
@@ -38,9 +38,11 @@
 
             <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
                 <a class="btn1" href="index.html" role="menuitem">Home</a>
-                <a class="btn1" href="#" role="menuitem">Mond</a>
-                <a class="btn1" href="subpages/badSleepCreep/badSleep.html" role="menuitem">Bad Sleep</a>
+                <a class="btn1" href="subpages/dataMata/worldData.html" role="menuitem">Mond</a>
                 <a class="btn1" href="subpages/sleepQuizBliss/sleepQuiz.html" role="menuitem">Quiz</a>
+                <a class="btn1" href="subpages/kindsOfSleep/kindsOfSleep.html" role="menuitem">Arten</a>
+                <a class="btn1" href="subpages/sleepConditions/Sleepconditions.html" role="menuitem">Voraussetzungen</a>
+                <a class="btn1" href="subpages/noahsOrdner/index.html" role="menuitem">Schlechter Schlaf</a>
             </div>
 
             <div id="dark-mode-con" class="flex-center">
@@ -89,20 +91,9 @@
     </main>
 
     <footer id="footer" class="flex-center">
-        
-        <div id="imprint-text" class="flex-center">
-            <p>
-                Studentenprojekt der DHBW Heidenheim
-                <br>
-                Marienstraße 20, 89518 Heidenheim an der Brenz
-                <br>
-                https://www.heidenheim.dhbw.de/startseite
-            </p>
-
-        </div>
 
         <div id="imprint" class="flex-center">
-            Impressum
+            <a href="imprint.html">Impressum und Datenschutz</a>
         </div>
 
     </footer>
