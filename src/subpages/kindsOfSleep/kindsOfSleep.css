@@ -1,8 +1,3 @@
-* {
-    box-sizing: border-box
-}
-
-
 .zoom {
     padding: 50px;
     transition: transform 1s;
@@ -57,7 +52,7 @@ img{
 }
 
 .slide, .slide2, .slide3, .slide4{
-    height:20%;
+    height:auto;
     width:80%;
     margin: auto;
 }
@@ -101,6 +96,6 @@ img{
     animation-duration: 1.5s;
 }
 
-@media only screen and (max-width: 300px) {
-    .prevslide, .nextslide,.text {font-size: 11px}
+@media only screen and (max-width: 550px) {
+    .prevslide, .nextslide, .text , p, a{font-size: 12px}
 }
