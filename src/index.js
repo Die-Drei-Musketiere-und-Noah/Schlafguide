@@ -42,7 +42,11 @@ function showImprint() {
 /**
  * Execute after dom is loaded
  */
-window.onload = () => {
+window.addEventListener('load', function() {
+
+    //console.log(this.window.innerHeight, this.document.getElementById('body').offsetHeight);
+    //this.document.getElementById('filler').style.setProperty('height', String((this.window.innerHeight - this.document.getElementById('body').offsetHeight - this.document.getElementById('footer').offsetHeight - 2)+'px'));
+    //this.document.getElementById('filler').style.setProperty('width', '100%');
 
     //hack to set imprintText.style.height = 0px so the assertion in showImprint works 
     showImprint();
@@ -69,8 +73,7 @@ window.onload = () => {
     imprint.addEventListener('click', function() {
         showImprint();
     });
-
-};
+});
 
 
 

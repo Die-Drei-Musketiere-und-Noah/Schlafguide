@@ -1,0 +1,48 @@
+#quiz {
+    width: 100%;
+}
+
+#quiz-answers, #quiz-score-message {
+    margin-top: 1em;
+}
+
+#quiz-next-con {
+    margin-top: 2em;
+    font-weight: bolder;
+    transform: none;
+    display: flex;
+}
+
+#quiz-next {
+    padding: 1em;
+    cursor: pointer;
+    background-color: var(--nav-bg-color);
+}
+
+.answer-label {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+}
+
+.answer-radio {
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+    background-color: var(--nav-bg-color);
+    border-radius: 9999px;
+    transition: 0.4s ease;
+}
+
+.answer-wrapper {
+    margin-top: 0.4em;
+    user-select: none; 
+}
+
+input {
+    display: none;
+}
+
+input:checked ~ .answer-label > .answer-radio {
+    background-color: black;
+}
