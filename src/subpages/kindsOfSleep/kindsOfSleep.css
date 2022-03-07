@@ -1,3 +1,7 @@
+#content {
+    text-align: unset !important;
+}
+
 .zoom {
     padding: 50px;
     transition: transform 1s;
