@@ -55,6 +55,7 @@ header {
     top: 0;
     width: 100%;
     background-color:  var(--nav-bg-color);
+    z-index: 10;
 }
 
 footer {
@@ -192,6 +193,7 @@ footer {
 
 #content {
     padding: 2em;
+    z-index: -1;
 }
 
 #burger-menu-con {
