@@ -2,6 +2,7 @@
     /* general */
     --background: rgb(255, 250, 240);
     --body-min-width: 250px;
+    --color: black;
 
     /* navigation */
     --nav-bg-color: rgb(157, 177, 180);
@@ -9,7 +10,6 @@
     /* buttons */
     --btn1-hover-bg-color: rgb(49, 55, 56);
     --btn1-font-size: 2em;
-    --btn1-color: black;
     --btn1-hover-color: white;
     --btn1-padding: 0.5em;
 
@@ -17,6 +17,10 @@
     --burger-menu-size: 2.5em;
     --burger-menu-desktop-fix: 0px;
     --burger-menu-desktop-pixel-fix: 0px;
+
+    /* dark mode */
+    --dark-mode-button-size: 1.75em;
+    --dark-mode-button-multiplier: 2.2;
 }
 
 body {
@@ -25,6 +29,7 @@ body {
     padding: 0;
     background-color: var(--background);
     min-width: var(--body-min-width);   
+    color: var(--color);
 }
 
 /* custom scrollbar (only working in webkit browsers) */
@@ -143,6 +148,48 @@ footer {
     opacity: 0;
 }
 
+#dark-mode-con {
+    height: 100%;
+    width: calc(var(--burger-menu-size) * 2);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#dark-mode-toggle {
+    width: calc(var(--dark-mode-button-size) * var(--dark-mode-button-multiplier));
+    height: var(--dark-mode-button-size);
+    border-color: black;
+    border-radius: 9999px;
+    box-shadow: 0px 0px 0px 3px black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#dark-mode-checkbox:checked ~ #dark-mode-toggle > #dark-mode-ball{
+    transform: translateX(calc(var(--dark-mode-button-size) * var(--dark-mode-button-multiplier) - var(--dark-mode-button-size)));
+    background-color: white;
+}
+
+#dark-mode-checkbox:checked ~ #dark-mode-toggle {
+    background-color: black;
+}
+
+#dark-mode-ball {
+    transform: translateX(1px);
+    transition: 0.2s ease;
+    height: calc(var(--dark-mode-button-size) - 2px);
+    width: calc(var(--dark-mode-button-size) - 2px);
+    background-color: black;
+    border-radius: 9999px;
+}
+
+#dark-mode-checkbox {
+    display: none;
+}
+
 #content {
     padding: 2em;
 }
@@ -164,7 +211,7 @@ footer {
     transition: transform 0.5s;
     height: calc(var(--burger-menu-size) / 10);
     width: calc(var(--burger-menu-size) - 0.5em);
-    background-color: black;
+    background-color: var(--color);
     border-radius: 9999px;
 }
 
@@ -174,7 +221,7 @@ footer {
     height: calc(var(--burger-menu-size) / 10);
     width: var(--burger-menu-size);
     transform: translateX(calc(calc(var(--burger-menu-size)/10) * -1));
-    background-color: black;
+    background-color: var(--color);
     border-radius: 9999px;
     transition: transform 0.5s;
 }
@@ -195,7 +242,7 @@ footer {
     transform 0.3s 0.8s cubic-bezier(0.23, 1, 0.32, 1),
     width 0.7s 0s cubic-bezier(0.23, 1, 0.32, 1),
     height 0.7s 0s cubic-bezier(0.23, 1, 0.32, 1);
-    background-color: rgb(157, 177, 180);
+    background-color: var(--nav-bg-color);
     height: 100%;
     width: 100%;
     z-index: -100;

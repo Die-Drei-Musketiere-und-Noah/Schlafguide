@@ -40,6 +40,47 @@ function showImprint() {
 }
 
 /**
+ * toggles the dark mode
+ */
+function toggleDarkMode() {
+
+    console.log();
+    if(document.getElementById('dark-mode-checkbox').checked){
+        document.cookie = "darkMode=true";
+        setDarkModeProperty('--btn1-hover-bg-color', 'rgb(157, 177, 180)'); 
+        setDarkModeProperty('--btn1-hover-color', 'black'); 
+        setDarkModeProperty('--background', 'black'); 
+        setDarkModeProperty('--nav-bg-color', 'rgb(51, 57, 58)'); 
+        setDarkModeProperty('--color', 'white'); 
+    }
+    else {
+        document.cookie = "darkMode=false";
+        setDarkModeProperty('--btn1-hover-bg-color', 'rgb(49, 55, 56)'); 
+        setDarkModeProperty('--btn1-hover-color', 'white'); 
+        setDarkModeProperty('--background', 'rgb(255, 250, 240)'); 
+        setDarkModeProperty('--nav-bg-color', 'rgb(157, 177, 180)'); 
+        setDarkModeProperty('--color', 'black'); 
+    }
+    
+}
+
+function setDarkModeProperty(property, value) {
+    document.documentElement.style.setProperty(property, value);
+}
+
+function checkDarkMode() {
+    let cookie = decodeURIComponent(document.cookie).split('=');
+    if(cookie.length > 0){
+        for(let i=0; i<cookie.length; i++){
+            if(cookie[i] === 'darkMode' && cookie[i+1] === 'true'){
+                document.getElementById('dark-mode-checkbox').checked = true;
+                toggleDarkMode();
+            }
+        }
+    }
+}
+
+/**
  * Execute after dom is loaded
  */
 window.addEventListener('load', function() {
@@ -50,6 +91,9 @@ window.addEventListener('load', function() {
 
     //hack to set imprintText.style.height = 0px so the assertion in showImprint works 
     showImprint();
+
+    //check for darkmode
+    checkDarkMode();
 
     //calculate scrollbar width to avoid y overflow of the mobile menu on desktop
     let scrollbarWidth = window.innerWidth - document.body.clientWidth;
@@ -70,8 +114,15 @@ window.addEventListener('load', function() {
     });
 
     //listener to show imprint
+    let imprint = document.getElementById('imprint');
     imprint.addEventListener('click', function() {
         showImprint();
+    });
+
+    //listener to toggle darkmode
+    let darkModeToggle = document.getElementById('dark-mode-checkbox');
+    darkModeToggle.addEventListener('change', function() {
+        toggleDarkMode();
     });
 });
 
