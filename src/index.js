@@ -30,7 +30,6 @@ function showMobileMenuLinks(checked) {
  * toggles the dark mode
  */
 function toggleDarkMode() {
-
     if(document.getElementById('dark-mode-checkbox').checked){
         document.cookie = "darkMode=true; path=/";
         setDarkModeProperty('--btn1-hover-bg-color', 'rgb(157, 177, 180)'); 
@@ -47,7 +46,6 @@ function toggleDarkMode() {
         setDarkModeProperty('--nav-bg-color', 'rgb(157, 177, 180)'); 
         setDarkModeProperty('--color', 'black'); 
     }
-    
 }
 
 function setDarkModeProperty(property, value) {
