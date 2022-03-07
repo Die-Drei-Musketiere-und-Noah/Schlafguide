@@ -23,7 +23,7 @@
 .nextslide{
     margin-top: -40px;
     right:0;
-    color: #000000;
+    color: var(--color);
     font-weight: bold;
     font-size: 18px;
     transition: 0.5s cubic-bezier(0.21, 0.81, 0.6, 0.36);
@@ -59,7 +59,7 @@ img{
 
 .prevslide{
     margin-top: -40px;
-    color: #000000;
+    color: var(--color);
     font-weight: bold;
     font-size: 18px;
     transition: 0.5s cubic-bezier(0.21, 0.81, 0.6, 0.36);
@@ -73,7 +73,7 @@ img{
 }
 
 .ueberschrift {
-    color: #000000;
+    color: var(--color);
     font-size: 15px;
     position: absolute;
     bottom: 8px;
