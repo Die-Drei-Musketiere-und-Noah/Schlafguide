@@ -6,31 +6,47 @@
     --btn1-font-size: 2em;
     --btn1-color: black;
     --btn1-hover-color: white;
+    
+}
+h2{
+    text-align: center;
 }
 .center{    
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 75%; 
 }
 img[usemap] {
     border: none;
+    outline: 1px solid gray;
     height: auto;
     width: auto;
     max-width: 100%;
+    margin-bottom: 7px;
+}
+.Infofield{
+    display: block;
+    outline:3.5px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 85%;
 }
 .Upperfield-Info{
-
+    font-size: 20px;
     color: #fff;
     height: auto + 10px;
     outline: 3px solid var(--darkblue);
     background-color: var(--darkblue);
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 
 } 
 .Lowerfield-Info{
-    margin-top: 3px;
-    color: #000;
+    font-size: 23px;
+    margin-top: 0px;
+    margin-inline: 30px;
+    color: rgb(19, 18, 18);
     outline: 3px solid var(--lightblue);
     background-color: var(--lightblue);
 } 
