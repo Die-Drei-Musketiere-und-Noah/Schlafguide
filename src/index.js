@@ -1,3 +1,5 @@
+window.fillerHeight = 0;
+
 /**
  * function to set css vars of the scrollbar width 
  * (vars are used in the stylesheet to correctly depict mobile menu on dektop)
@@ -21,21 +23,6 @@ function showMobileMenuLinks(checked) {
     } else {
         links.classList.remove('links-mobile-menu-open');
         btn1.forEach(element => element.classList.remove('btn1-mobile-menu-open'));
-    }
-}
-
-/**
- * function to show the imprint
- */
-function showImprint() {
-    let imprintText = document.getElementById('imprint-text');
-    if(imprintText.style.height === '0px'){
-        imprintText.style.setProperty('height', imprintText.scrollHeight*2 + 'px');
-        imprintText.classList.add('imprint-open');
-    }
-    else {
-        imprintText.style.setProperty('height', '0px');
-        imprintText.classList.remove('imprint-open');
     }
 }
 
@@ -85,13 +72,6 @@ function checkDarkMode() {
  */
 window.addEventListener('load', function() {
 
-    //console.log(this.window.innerHeight, this.document.getElementById('body').offsetHeight);
-    //this.document.getElementById('filler').style.setProperty('height', String((this.window.innerHeight - this.document.getElementById('body').offsetHeight - this.document.getElementById('footer').offsetHeight - 2)+'px'));
-    //this.document.getElementById('filler').style.setProperty('width', '100%');
-
-    //hack to set imprintText.style.height = 0px so the assertion in showImprint works 
-    showImprint();
-
     //check for darkmode
     checkDarkMode();
 
@@ -108,15 +88,9 @@ window.addEventListener('load', function() {
     });
 
     //check if media query is active and switch to dektop menu/mobile menu
-    let mediaQuery = window.matchMedia('only screen and (max-aspect-ratio: 5/6)');
+    let mediaQuery = window.matchMedia('only screen and (max-aspect-ratio: 4/3)');
     mediaQuery.addEventListener('change', function() {
         this.matches ? showMobileMenuLinks(menuCheckbox.checked) : showMobileMenuLinks(false);
-    });
-
-    //listener to show imprint
-    let imprint = document.getElementById('imprint');
-    imprint.addEventListener('click', function() {
-        showImprint();
     });
 
     //listener to toggle darkmode
@@ -125,6 +99,5 @@ window.addEventListener('load', function() {
         toggleDarkMode();
     });
 });
-
 
 

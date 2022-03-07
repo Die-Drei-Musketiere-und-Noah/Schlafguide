@@ -119,7 +119,6 @@ function showResults() {
  * Loads the questions and score messages
  */
 function loadResources(){
-
     Promise.all([
         fetch(QUESTION_JSON).then(quizQuestions => quizQuestions.json()),
         fetch(SCORE_MESSAGES_JSON).then(quizScores => quizScores.json())
