@@ -7,7 +7,7 @@
 }
 
 #quiz-answers, #quiz-score-message {
-    margin-top: 1em;
+    margin-top: 3em;
 }
 
 #quiz-next-con {
@@ -15,13 +15,22 @@
     font-weight: bolder;
     transform: none;
     display: flex;
+    padding-left: 45%;
+    transition: 0.4s ease;
 }
 
 #quiz-next {
     padding: 1em;
     cursor: pointer;
     background-color: var(--nav-bg-color);
+    transition: 0.2s ease;
 }
+
+#quiz-next:hover {
+    background-color: var(--btn1-hover-bg-color);
+    color: var(--btn1-hover-color);
+}
+
 
 .answer-label {
     cursor: pointer;
@@ -41,6 +50,8 @@
 .answer-wrapper {
     margin-top: 0.4em;
     user-select: none; 
+    padding-left: 43%;
+    transition: 0.4s ease;
 }
 
 input {

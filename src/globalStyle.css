@@ -80,10 +80,22 @@ footer {
     transition: .2s ease;
 }
 
+.ahover {
+    transition: 0.4s ease;
+    margin: calc(var(--btn1-padding) / 2);
+    margin-top: 2em;
+}
+
+.pmargin {
+    margin-bottom: 4em;
+    line-height: 1.2em;
+}
+
 .btn1 {
     padding: var(--btn1-padding);
     height: 100%;
     color: var(--btn1-color);
+    background-color: var(--nav-bg-color);
 }
 
 .btn1-mobile-menu-open:nth-child(1) {
@@ -315,5 +327,18 @@ footer {
 
     .btn1 {
         transform: translateX(-100vw);
+    }
+
+    .ahover {
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+
+    .answer-wrapper {
+        padding-left: 0 !important;
+    }
+
+    #quiz-next-con {
+        padding-left: 0 !important;
     }
 }
