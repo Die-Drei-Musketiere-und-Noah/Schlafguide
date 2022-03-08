@@ -25,57 +25,9 @@ img[usemap] {
     max-width: 100%;
     margin-bottom: 7px;
 }
-.Infofield{
-    display: block;
-    outline:3.5px solid gray;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 85%;
-}
-.Upperfield-Info{
-    font-size: 20px;
-    color: #fff;
-    height: auto + 10px;
-    outline: 3px solid var(--darkblue);
-    background-color: var(--darkblue);
-    margin-bottom: 3px;
+    
 
-} 
-.Lowerfield-Info{
-    font-size: 23px;
-    margin-top: 0px;
-    margin-inline: 30px;
-    color: rgb(19, 18, 18);
-    outline: 3px solid var(--lightblue);
-    background-color: var(--lightblue);
-} 
 area {
     outline: 5px solid var(--red);
 }
-  
-.popup {
-    padding: 20px;
-    background-color: rgba(100, 100, 100, 0.9);
-    color: white;
-    font-weight: 100;
-    font-size: 14px;
-    position: absolute;
-    opacity: 0;
-    transform: scale(0);
-    transition: opacity 300ms, transform 300ms;
-}
-  
-.popup:target {
-    opacity: 1;
-    transform: scale(1);
-}
-  
-.popup > .close {
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    background-color: black;
-    padding: 4px 10px;
-}
-  
+

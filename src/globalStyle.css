@@ -1,69 +1,129 @@
 :root {
+    /* general */
     --background: rgb(255, 250, 240);
+    --body-min-width: 250px;
+    --color: black;
+
+    /* navigation */
     --nav-bg-color: rgb(157, 177, 180);
+
+    /* buttons */
     --btn1-hover-bg-color: rgb(49, 55, 56);
     --btn1-font-size: 2em;
-    --btn1-color: black;
     --btn1-hover-color: white;
-}
-img[usemap] {
-    border: none;
-    height: auto;
-    width: auto;
-}
-html {
-    height: 100vh;
-    width: 100vw;
+    --btn1-padding: 0.5em;
+
+    /* burger menu */
+    --burger-menu-size: 2.5em;
+    --burger-menu-desktop-fix: 0px;
+    --burger-menu-desktop-pixel-fix: 0px;
+
+    /* dark mode */
+    --dark-mode-button-size: 1.75em;
+    --dark-mode-button-multiplier: 2.2;
 }
 
 body {
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    min-width: var(--body-min-width);   
+    color: var(--color);
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
 }
 
+/* custom scrollbar (only working in webkit browsers) */
+::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: var(--nav-bg-color);
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+/* general rules */ 
 a {
     text-decoration: none;
 }
 
 header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
-}
-
-#nav-con {
     background-color:  var(--nav-bg-color);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+    z-index: 10;
 }
 
-#content {
-    padding-top: 6em;
-}
-
-.burger-menu {
-    display: none;
-    width: 1em;
-    height: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.burger-menu-line {
-    height: .2em;
+footer {
+    position: sticky;
+    bottom: 0;
     width: 100%;
-    background-color: black;
+    background-color: var(--nav-bg-color);
+    flex-wrap: wrap;
 }
 
-.btn1, .burger-menu {
-    padding: .5em;
+/* classes */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-transition {
+    transition: .2s ease;
+}
+
+.ahover {
+    transition: 0.4s ease;
+    margin: calc(var(--btn1-padding) / 2);
+    margin-top: 2em;
+}
+
+.pmargin {
+    margin-bottom: 4em;
+    line-height: 1.2em;
+}
+
+.btn1 {
+    padding: var(--btn1-padding);
     height: 100%;
     color: var(--btn1-color);
-    transition: ease 0.5s;
-    font-size: var(--btn1-font-size);
+    background-color: var(--nav-bg-color);
+}
+
+.btn1-mobile-menu-open:nth-child(1) {
+    transition: transform 1s ease 0.8s;
+}
+
+.btn1-mobile-menu-open:nth-child(2) {
+    transition: transform 1s ease 0.9s;
+}
+
+.btn1-mobile-menu-open:nth-child(3) {
+    transition: transform 1s ease 1s;
+}
+
+.btn1-mobile-menu-open:nth-child(4) {
+    transition: transform 1s ease 1.1s;
+}
+
+.btn1-mobile-menu-open:nth-child(5) {
+    transition: transform 1s ease 1.2s;
+}
+
+.btn1-mobile-menu-open:nth-child(5) {
+    transition: transform 1s ease 1.3s;
+}
+
+.btn1-mobile-menu-open:nth-child(6) {
+    transition: transform 1s ease 1.4s;
 }
 
 .btn1:hover, .burger-menu:hover {
@@ -72,12 +132,213 @@ header {
     color: var(--btn1-hover-color);
 }
 
-@media only screen and (max-aspect-ratio: 5/6) {
-    .btn1 {
-        display: none;
+.btn1-mobile-menu-open {
+    width: calc(100vw - var(--burger-menu-desktop-fix) - var(--burger-menu-desktop-pixel-fix) - calc(var(--btn1-padding) * 2)) !important;
+    transform: translateX(0) !important;
+}
+
+.links-mobile-menu-open {
+    transform: translateY(var(--burger-menu-size)) translateX(0) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    transition: transform 0.2s 1.1s ease;
+}
+
+/* elements */
+#links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--btn1-font-size);
+    position: relative;
+    transition: .2s ease;
+}
+
+#imprint {
+    width: 100%;
+    height: 2em;
+    cursor: pointer;
+    
+}
+
+#imprint a{
+    color: var(--color);
+}
+
+#dark-mode-con {
+    height: 100%;
+    width: calc(var(--burger-menu-size) * 2);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#dark-mode-toggle {
+    width: calc(var(--dark-mode-button-size) * var(--dark-mode-button-multiplier));
+    height: var(--dark-mode-button-size);
+    border-color: black;
+    border-radius: 9999px;
+    box-shadow: 0px 0px 0px 3px black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#dark-mode-checkbox:checked ~ #dark-mode-toggle > #dark-mode-ball{
+    transform: translateX(calc(var(--dark-mode-button-size) * var(--dark-mode-button-multiplier) - var(--dark-mode-button-size)));
+    background-color: white;
+}
+
+#dark-mode-checkbox:checked ~ #dark-mode-toggle {
+    background-color: black;
+}
+
+#dark-mode-ball {
+    transform: translateX(1px);
+    transition: 0.2s ease;
+    height: calc(var(--dark-mode-button-size) - 2px);
+    width: calc(var(--dark-mode-button-size) - 2px);
+    background-color: black;
+    border-radius: 9999px;
+}
+
+#dark-mode-checkbox {
+    display: none;
+}
+
+#content {
+    padding: 2em;
+    text-align: center;
+    flex: 1;    
+}
+
+#privacy {
+    margin-top: 3em;
+}
+
+#burger-menu-con {
+    position: absolute;
+    width: var(--burger-menu-size);
+    height: var(--burger-menu-size);
+    padding: .5em;
+    transform: translateX(-100vw);
+    cursor: pointer;
+}
+
+#burger-menu-checkbox {
+    display: none;
+}
+
+#burger-menu {
+    transition: transform 0.5s;
+    height: calc(var(--burger-menu-size) / 10);
+    width: calc(var(--burger-menu-size) - 0.5em);
+    background-color: var(--color);
+    border-radius: 9999px;
+}
+
+#burger-menu div::before {
+    content: '';
+    display: block;
+    height: calc(var(--burger-menu-size) / 10);
+    width: var(--burger-menu-size);
+    transform: translateX(calc(calc(var(--burger-menu-size)/10) * -1));
+    background-color: var(--color);
+    border-radius: 9999px;
+    transition: transform 0.5s;
+}
+
+#burger-menu div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s 0.5s;
+    transform: translateY(calc(var(--burger-menu-size) / 3.4));
+}
+
+#burger-menu-background {
+    display: none;
+    position: fixed;
+    transform: translate(0, 0);
+    transition:
+    transform 0.3s 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    width 0.7s 0s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.7s 0s cubic-bezier(0.23, 1, 0.32, 1);
+    background-color: var(--nav-bg-color);
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+    left: 0;
+    top: 0;
+}
+
+#burger-menu-checkbox:checked ~ #burger-menu-background {
+    transform: translate(calc(50vw - 50% - calc(var(--burger-menu-desktop-fix) / 2) - var(--burger-menu-desktop-pixel-fix)), calc(50vh - 50%));
+    transition:
+    transform 0.3s 0s cubic-bezier(0.23, 1, 0.32, 1),
+    width 0.7s 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.7s 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    left 0.5s 0.6s ease, 
+    top 0.5s 0.6s ease;
+    height: 100vh;
+    width: calc(100vw - var(--burger-menu-desktop-fix));
+}
+  
+#burger-menu div:last-child {
+    transform: translateY(calc(calc(var(--burger-menu-size) / 3.4) * -1));
+}
+
+#burger-menu-checkbox:checked ~ #burger-menu {
+    transform: translateY(0) rotate(-45deg);
+    transition: transform 0.5s 0.5s;
+}
+
+#burger-menu-checkbox:checked ~ #burger-menu div {
+    transform: translateY(0);
+    transition: transform 0.5s;
+}
+
+#burger-menu-checkbox:checked ~ #burger-menu div:last-child::before {
+    transform: rotate(90deg) translateY(calc(var(--burger-menu-size) / 10));
+    transition: transform 0.5s 0.5s;
+}
+
+/* media query to make header responsive */
+@media only screen and (max-aspect-ratio: 4/3) {
+
+    #links {
+        transform: translateY(-100vh);
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
-    .burger-menu {
+    #burger-menu-con {
+        position: relative;
+        transform: translateX(0);
+    }
+
+    #burger-menu-background {
         display: flex;
     }
-  }
+
+    .btn1 {
+        transform: translateX(-100vw);
+    }
+
+    .ahover {
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+
+    .answer-wrapper {
+        padding-left: 0 !important;
+    }
+
+    #quiz-next-con {
+        padding-left: 0 !important;
+    }
+}
