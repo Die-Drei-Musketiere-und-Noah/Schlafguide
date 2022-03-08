@@ -1,0 +1,141 @@
+
+[
+    {
+        "question": "Wie viele Stunden schlafen Sie durchschnittlich?",
+        "answers": 
+            [
+                {
+                    "answer" : "mehr als 9",
+                    "score": "0"
+                },
+                {
+                    "answer" : "7 bis 9",
+                    "score": "1"
+                },
+                {
+                    "answer" : "6 bis 7",
+                    "score": "-1"
+                },
+                {
+                    "answer" : "weniger als 6",
+                    "score": "-2"
+                }
+            ],
+        "fact": "Für Kinder zwischen 6 und 12 Jahren ist eine nächtliche Schlafdauer von neun Stunden normal. Im Alter von etwa 40 Jahren schlafen Menschen in der Regel etwa sieben Stunden, und etwa sechseinhalb Stunden, wenn sie zwischen 55 und 60 Jahre alt sind. Gesunde 80-Jährige schlafen meist etwa sechs Stunden pro Nacht. Das sind jedoch nur Durchschnittswerte; jeder Mensch braucht unterschiedlich viel Schlaf."
+    },
+    {
+        "question": "Wie würden Sie die Tiefe ihres Schlafs werten?",
+        "answers": 
+            [
+                {
+                    "answer" : "sehr tief",
+                    "score": "1"
+                },
+                {
+                    "answer" : "meist tief",
+                    "score": "0"
+                },
+                {
+                    "answer" : "manchmal tief",
+                    "score": "-1"
+                },
+                {
+                    "answer" : "selten tief",
+                    "score": "-2"
+                }
+            ],
+        "fact": "An der Verfestigung von Lerninhalten ist der Tiefschlaf wesentlich beteiligt. Auch hat er Auswirkungen auf die Gedächtnisleistung,  zu wenig Tiefschlaf lässt das Demenzrisiko ansteigen. Außerdem ist zu wenig REM-Schlaf mit einer erhöhten Sterblichkeit verbunden."
+    },   
+    {
+        "question": "Konsumieren Sie Alkohol vor dem Schla­fen­ge­hen?",
+        "answers": 
+            [
+                {
+                    "answer" : "fast nie",
+                    "score": "1"
+                },
+                {
+                    "answer" : "manchmal",
+                    "score": "0"
+                },
+                {
+                    "answer" : "öfters",
+                    "score": "-1"
+                },
+                {
+                    "answer" : "regelmäßig",
+                    "score": "-2"
+                }
+            ],
+        "fact": "Alkohol kann dabei helfen, schneller einzuschlafen, aber trägt nicht zu einem erholsamen Schlaf bei. In der Nacht wachen wir viel häufiger auf, wodurch die Schlafqualität deutlich leidet und der Körper zusätzlich belastet wird."
+    },
+    {
+        "question": "Legen Sie öfters mal einen Mittagsschlaf ein?",
+        "answers": 
+            [
+                {
+                    "answer" : "Fast nie",
+                    "score": "0"
+                },
+                {
+                    "answer" : "ja, ca. 10-20min",
+                    "score": "0"
+                },
+                {
+                    "answer" : "ja, ca. 20min",
+                    "score": "1"
+                },
+                {
+                    "answer" : "ja, auch mal >30 min",
+                    "score": "-1"
+                }
+            ],
+        "fact": "Um auch nach dem Mittagsschlaf leistungsfähig zu sein, sollte der Power-Nap nicht mehr als 20 Minuten dauern. Da sich das Bedürfnis nach Schlaf am Abend verringern kann, ist es Menschen mit Schlafstörung nicht zu empfehlen, einen Mittagsschlaf zu machen."
+    },  
+    {
+        "question": "Machen Sie eins/mehrere dieser Dinge vor dem schlafen? <br> Eine fettige Mahlzeit essen, sportlich aktiv sein, mit dem Handy im Internet surfen",
+        "answers": 
+            [
+                {
+                    "answer" : "keins davon",
+                    "score": "1"
+                },
+                {
+                    "answer" : "ja, eins",
+                    "score": "0"
+                },
+                {
+                    "answer" : "ja, mehr als eins",
+                    "score": "-1"
+                },
+                {
+                    "answer" : "ja, alle",
+                    "score": "-2"
+                }
+            ],
+        "fact": "Etwa zwei Stunden vor dem zu Bett gehen sollte kein intensiver Sport mehr getrieben werden. Fetthaltige Lebensmittel oder Rohkost verdaut der Magen-Darm-Trakt nur schwer. Auch zum Handy sollte nicht mehr gegriffen werden. Es wird angenommen, dass uns Inhalte, die wir auf den Bildschirmen sehen, wachhalten, da sie uns sehr interessieren oder aufwühlen."
+    },  
+    {
+        "question": "Wie oft wachen Sie in der Nacht auf? (und wie schnell schlafen Sie wieder ein?)",
+        "answers": 
+            [
+                {
+                    "answer" : "kein mal",
+                    "score": "1"
+                },
+                {
+                    "answer" : "mehrmals, <10 min einschlafen",
+                    "score": "0"
+                },
+                {
+                    "answer" : "ein Paar mal, >15 min einschlafen",
+                    "score": "-1"
+                },
+                {
+                    "answer" : "sehr oft, >15 min einschlafen",
+                    "score": "-2"
+                }
+            ],
+        "fact": "Bis zu zehn Mal pro Stunde erwacht der Mensch für einige Sekunden. Zum Problem wird die Durchschlafstörung erst, wenn man nach wenigen Minuten nicht wieder einschlafen kann. Halten Zustände der Schlaflosigkeit mehr als vier Wochen an, sollte man einen Arzt aufsuchen."
+    }
+]

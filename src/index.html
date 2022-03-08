@@ -1,35 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="datei.png">
-    <link rel="stylesheet" href="globalStyle.css">
+
+    <!-- meta info -->
+    <meta charset="UTF-8">
+    <title>Schlafguide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon -->
+    <link type="image/svg+xml" rel="icon" href="favicon.svg">
+
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="globalStyle.css">
+    
+    <!-- js -->
+    <script src="index.js"></script>
+
 </head>
 
-<body>
+<body id="body">
 
     <header>
+
         <nav id="nav-con">
             
-            <div class="burger-menu">
-                <div class="burger-menu-line"></div>
-                <div class="burger-menu-line"></div>
-                <div class="burger-menu-line"></div>
+            <label id="burger-menu-con" class="header-transition flex-center" aria-label="mobile navigation">
+                <input id="burger-menu-checkbox" type="checkbox">
+                <div id="burger-menu">
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="burger-menu-background">
+                </div>
+
+            </label>
+
+            <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
+                <a class="btn1" href="index.html" role="menuitem">Home</a>
+                <a class="btn1" href="subpages/dataMata/worldData.html" role="menuitem">Mond</a>
+                <a class="btn1" href="subpages/sleepQuizBliss/sleepQuiz.html" role="menuitem">Quiz</a>
+                <a class="btn1" href="subpages/kindsOfSleep/kindsOfSleep.html" role="menuitem">Arten</a>
+                <a class="btn1" href="subpages/sleepConditions/Sleepconditions.html" role="menuitem">Voraussetzungen</a>
+                <a class="btn1" href="subpages/noahsOrdner/index.html" role="menuitem">Schlechter Schlaf</a>
             </div>
-            <a class="btn1" href="#">Home</a>
-            <a class="btn1" href="#">About</a>
-            <a class="btn1" href="#">Blog</a>
-            <a class="btn1" href="#">Contact</a>
+
+            <div id="dark-mode-con" class="flex-center">
+                <input type="checkbox" id="dark-mode-checkbox">
+                <label id="dark-mode-toggle" for="dark-mode-checkbox">
+                    <div id="dark-mode-ball"></div>
+                </label>
+            </div>
+
         </nav>
+    
     </header>
 
-    <main id="content">
+    <main id="content" role="main" aria-label="main content">
 
+        <h1>
+            Willkommen auf unserer Website!
+        </h1>
+        <h2>
+            Schlaf ist lebenswichtig für Körper und Geist.
+        </h2>
+        <p class="pmargin">
+            Nicht umsonst verbringen wir rund ein Drittel unseres Lebens schlafend.
+            <br> 
+            Erholsamer und ausreichender Schlaf trägt zur Gesundheit und zur Lebensqualität bei. 
+            <br>
+            Schlafprobleme können sich hingegen negativ hierauf auswirken.
+        </p>
+        <h3>
+            Mondphasen
+        </h3>
+        <p class="pmargin">
+            Doch kein Mythos?
+            <br>
+            Die Mondphasen haben offenbar doch einen Einfluss auf unseren Schlaf – selbst in der Großstadt, wie nun eine Studie enthüllt. 
+            <br>
+            Demnach schlafen Menschen in den Tagen vor dem Vollmond weniger und später als in anderen Phasen des Mondzyklus. 
+            <br>
+            Doch wie dieser Effekt nicht nur bei Naturvölkern, sondern sogar in der lichtdurchfluteten Stadt zustande kommt, 
+            <br>
+            ist noch unklar, so die Forscher im Fachmagazin „Science Advances“.
+            <br>
+            <br>
+            Sehen Sie sich die aktuelle<a class="btn1 ahover" href="subpages/dataMata/worldData.html">Mondphase</a>live an!
+        </p>
+        <h3>
+            Schlafzimmer
+        </h3>
+        <p class="pmargin">
+            Jeder Deutsche schläft im Durchschnitt mehr als 24 Jahre in seinem Leben. 
+            <br>
+            Grund genug, das Schlafzimmer so zu gestalten, dass die Jahre auch gut investiert sind.
+            <br>
+            Was muss man bedenken, um einen erholsamen Schlaf garantieren zu können? 
+            <br>
+            Und vor allem: Was hat im Schlafzimmer absolut nichts zu suchen?
+            <br>
+            <br>
+            Testen Sie sich selber in unserem interaktiven<a class="btn1 ahover" href="subpages/sleepConditions/Sleepconditions.html">Schlafzimmer!</a>
+        </p>
+
+        <h3>
+            Wie gut ist Ihr Schlafverhalten?
+        </h3>
+        <p class="pmargin">
+            Weniger als sieben Stunden schlafen die Deutschen im Durchschnitt - eindeutig zu wenig. 
+            <br>
+            Vor zehn Jahren waren es noch fünfzehn Minuten, vor hundert Jahren sogar ganze zwei Stunden mehr. 
+            <br>
+            Dass zu wenig Schlaf negative Auswirkungen auf unsere Gesundheit haben kann, zeigen jetzt aktuelle Studien.
+            <br>
+            <br>
+            Testen Sie sich selber in unserem <a class="btn1 ahover" href="subpages/sleepQuizBliss/sleepQuiz.html">Schlafquiz!</a>
+            <br>
+        </p>
     </main>
 
-    <footer>
+    <footer id="footer" class="flex-center">
+
+        <div id="imprint" class="flex-center">
+            <a href="imprint.html">Impressum und Datenschutz</a>
+        </div>
 
     </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -44,4 +139,5 @@
     });
     </script>
 </body>
+
 </html>
