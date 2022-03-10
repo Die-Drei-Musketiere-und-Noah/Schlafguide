@@ -1,7 +1,7 @@
 const btns = document.querySelectorAll(".tab-btn");
 const definition = document.querySelector(".definition");
 const articles = document.querySelectorAll(".content");
-const images = document.querySelectorAll(".definition-img")
+const images = document.querySelectorAll(".definition-img");
 
 definition.addEventListener("click", function(e)
 {
