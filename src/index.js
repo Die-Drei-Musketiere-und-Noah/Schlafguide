@@ -30,10 +30,8 @@ function showMobileMenuLinks(checked) {
  * toggles the dark mode
  */
 function toggleDarkMode() {
-
-    console.log();
     if(document.getElementById('dark-mode-checkbox').checked){
-        document.cookie = "darkMode=true";
+        document.cookie = "darkMode=true; path=/";
         setDarkModeProperty('--btn1-hover-bg-color', 'rgb(157, 177, 180)'); 
         setDarkModeProperty('--btn1-hover-color', 'black'); 
         setDarkModeProperty('--background', 'black'); 
@@ -42,7 +40,7 @@ function toggleDarkMode() {
         setDarkModeProperty('--color', 'white'); 
     }
     else {
-        document.cookie = "darkMode=false";
+        document.cookie = "darkMode=false; path=/";
         setDarkModeProperty('--btn1-hover-bg-color', 'rgb(49, 55, 56)'); 
         setDarkModeProperty('--btn1-hover-color', 'white'); 
         setDarkModeProperty('--background', 'rgb(255, 250, 240)'); 
@@ -50,22 +48,25 @@ function toggleDarkMode() {
         setDarkModeProperty('--tab-background', 'rgb(210, 236, 240)');
         setDarkModeProperty('--color', 'black'); 
     }
-    
 }
 
 function setDarkModeProperty(property, value) {
     document.documentElement.style.setProperty(property, value);
 }
 
+/**
+ * from: https://stackoverflow.com/questions/5639346/what-is-the-shortest-function-for-reading-a-cookie-by-name-in-javascript
+ * @param {String} name 
+ * @returns cookieValue
+ */
+const getCookieValue = (name) => (
+    document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
+)
+
 function checkDarkMode() {
-    let cookie = decodeURIComponent(document.cookie).split('=');
-    if(cookie.length > 0){
-        for(let i=0; i<cookie.length; i++){
-            if(cookie[i] === 'darkMode' && cookie[i+1] === 'true'){
-                document.getElementById('dark-mode-checkbox').checked = true;
-                toggleDarkMode();
-            }
-        }
+    if(getCookieValue('darkMode') === 'true'){
+        document.getElementById('dark-mode-checkbox').checked = true;
+        toggleDarkMode();
     }
 }
 
@@ -74,6 +75,7 @@ function checkDarkMode() {
  */
 window.addEventListener('load', function() {
 
+    
     //check for darkmode
     checkDarkMode();
 
