@@ -36,6 +36,7 @@ function toggleDarkMode() {
         setDarkModeProperty('--btn1-hover-color', 'black'); 
         setDarkModeProperty('--background', 'black'); 
         setDarkModeProperty('--nav-bg-color', 'rgb(51, 57, 58)'); 
+        setDarkModeProperty('--tab-background', 'rgb(98, 110, 112)');
         setDarkModeProperty('--color', 'white'); 
     }
     else {
@@ -44,6 +45,7 @@ function toggleDarkMode() {
         setDarkModeProperty('--btn1-hover-color', 'white'); 
         setDarkModeProperty('--background', 'rgb(255, 250, 240)'); 
         setDarkModeProperty('--nav-bg-color', 'rgb(157, 177, 180)'); 
+        setDarkModeProperty('--tab-background', 'rgb(210, 236, 240)');
         setDarkModeProperty('--color', 'black'); 
     }
 }
