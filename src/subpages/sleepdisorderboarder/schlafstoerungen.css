@@ -21,7 +21,6 @@
 body {
   background: var(--background);
   color: var(--color);
-  line-height: 1.5;
   font-size: 0.875rem;
 }
 ul {
