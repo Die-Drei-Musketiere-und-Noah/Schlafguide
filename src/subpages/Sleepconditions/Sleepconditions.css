@@ -10,6 +10,26 @@
 }
 h2{
     text-align: center;
+    font-size: 3.34vw;
+}
+.InfoTitle{
+    font-size: 3.34vw;
+    
+}
+.InfoText{
+    font-size: 2.2vw;
+    
+}
+.svg{
+    border: none;
+    outline: 1px solid gray;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 7px;
+}
+.Infosource{
+    font-size: 1.4vw;
 }
 .center{    
     display: block;
@@ -25,9 +45,6 @@ img[usemap] {
     max-width: 100%;
     margin-bottom: 7px;
 }
-    
-
 area {
     outline: 5px solid var(--red);
 }
-

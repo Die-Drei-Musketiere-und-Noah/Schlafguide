@@ -10,24 +10,10 @@
     <link type="text/css" rel="stylesheet" href="../../globalStyle.css">
     <link type="text/css" rel="stylesheet" href="Sleepconditions.css">
     <!-- javascript -->
-    <script type="text/javascript">
-        document.getElementById('inputfile')
-            .addEventListener('change', function() {
-              
-            var fr=new FileReader();
-            fr.onload=function(){
-                document.getElementById('output')
-                        .textContent=fr.result;
-            }
-              
-            fr.readAsText(this.files[0]);
-            
-        })
-    </script>
     <script src="Sleepconditions.js"></script>
 </head>
 
-<body>
+<body onload="TimeImageEditor()">
 
     <header>
         <nav id="nav-con">
@@ -68,55 +54,126 @@
     <main id="content" role="main" aria-label="main content">
        
     <h2 id="BildKopf" class="center"> Der Perfekte Raum</h2>
-    <img src="images/SchlafZimmer.jpg" width="796" height="550" usemap="#image-map" class="center imageslider" alt="">
+    <img src="images/SchlafZimmer.jpg" width="796" height="550" usemap="#image-map" alt="">
     <map name="image-map">
-    <area target="" alt="Fenster" href="javascript:changeinfoText(0);"  coords="428,355,430,349,453,351,453,360,571,383,574,284,589,283,589,218,465,241,443,256,424,250,413,251,411,271,413,324,418,348" shape="poly">
-    <area target="" alt="Lampe"   href="javascript:changeinfoText(1);"  coords="438,225,27" shape="circle">
-    <area target="" alt="Laptop"  href="javascript:changeinfoText(2);"  coords="445,376,449,352,432,343,423,364,408,373,423,382" shape="poly">
-    <area target="" alt="Kissen"  href="javascript:changeinfoText(3);"  coords="72,398,79,413,70,439,179,424,173,409,174,391,121,390" shape="poly">
-    <area target="" alt="Kissen"  href="javascript:changeinfoText(3);"  coords="177,388,187,406,186,425,269,411,257,392,256,376,215,379" shape="poly">
-    <area target="" alt="Pflanze" href="javascript:changeinfoText(4);"  coords="401,367,415,366,414,343,408,326,397,343" shape="poly">
-    <area target="" alt="Wand"    href="javascript:changeinfoText(5);"  coords="1,76,65,187,407,227,418,246,408,249,408,323,396,341,402,363,363,369,362,411,349,369,330,363,332,402,314,391,311,362,304,330,292,326,283,359,287,392,265,392,266,349,64,361,65,430,1,544" shape="poly">
-    <area target="" alt="Wand"    href="javascript:changeinfoText(5);"  coords="465,215,795,131,795,548,769,547,770,294,779,279,591,283,590,216,464,236" shape="poly">
-    <area target="" alt="Wand"    href="javascript:changeinfoText(5);"  coords="577,380,576,493,500,458,503,388,447,370,447,359" shape="poly">
-    <area target="" alt="Decke"   href="javascript:changeinfoText(6);"  coords="0,1,1,69,65,184,408,226,413,209,423,199,435,193,436,131,428,121,430,108,442,107,449,114,448,129,443,133,442,153,442,186,445,192,468,211,793,122,793,1" shape="poly">
-    <area target="" alt="Boden"   href="javascript:changeinfoText(7);"  coords="503,468,578,502,567,512,569,523,587,525,634,549,418,549,423,504,417,493,404,499,368,474,402,461,386,447,424,435,446,445,444,490" shape="poly">
-    <area target="" alt="Schrank" href="javascript:changeinfoText(8);"  coords="576,282,577,495,572,516,646,549,764,548,767,295,772,282" shape="poly">
-    <area target="" alt="Matratze"href="javascript:changeinfoText(9);"  coords="65,430,55,452,280,416,270,406,268,412,187,425,182,422,188,412,175,412,171,427,71,443,72,431" shape="poly">
-    <area target="" alt="Decke"   href="javascript:changeinfoText(10);" coords="54,452,283,415,405,504,274,548,4,546" shape="poly">
-    <area target="" alt="Bett"    href="javascript:changeinfoText(11);" coords="416,501,418,509,416,548,278,548" shape="poly">
-    <area target="" alt="Bett"    href="javascript:changeinfoText(11);" coords="64,367,264,352,265,398,260,391,258,380,241,377,179,390,185,408,173,410,174,394,164,388,73,399,73,427,65,429" shape="poly">
-    <area target="" alt="Lampe"   href="javascript:changeinfoText(1);"  coords="293,399,300,399,304,373,308,361,303,332,292,329,285,362" shape="poly">
-    <area target="" alt="Tisch"   href="javascript:changeinfoText(12);" coords="266,396,282,415,308,432,308,414,310,434,315,415,327,413,327,444,333,448,333,407,311,392,301,392,303,396,295,398,289,388" shape="poly">
+    <area target="" alt="Fenster" href="javascript:changeinfoText1(0);"  coords="428,355,430,349,453,351,453,360,571,383,574,284,589,283,589,218,465,241,443,256,424,250,413,251,411,271,413,324,418,348" shape="poly">
+    <area target="" alt="Lampe"   href="javascript:changeinfoText1(1);"  coords="438,225,27" shape="circle">
+    <area target="" alt="Laptop"  href="javascript:changeinfoText1(2);"  coords="445,376,449,352,432,343,423,364,408,373,423,382" shape="poly">
+    <area target="" alt="Kissen"  href="javascript:changeinfoText1(4);"  coords="72,398,79,413,70,439,179,424,173,409,174,391,121,390" shape="poly">
+    <area target="" alt="Kissen"  href="javascript:changeinfoText1(4);"  coords="177,388,187,406,186,425,269,411,257,392,256,376,215,379" shape="poly">
+    <area target="" alt="Pflanze" href="javascript:changeinfoText1(3);"  coords="401,367,415,366,414,343,408,326,397,343" shape="poly">
+    <area target="" alt="Wand"    href="javascript:changeinfoText1(5);"  coords="1,76,65,187,407,227,418,246,408,249,408,323,396,341,402,363,363,369,362,411,349,369,330,363,332,402,314,391,311,362,304,330,292,326,283,359,287,392,265,392,266,349,64,361,65,430,1,544" shape="poly">
+    <area target="" alt="Wand"    href="javascript:changeinfoText1(5);"  coords="465,215,795,131,795,548,769,547,770,294,779,279,591,283,590,216,464,236" shape="poly">
+    <area target="" alt="Wand"    href="javascript:changeinfoText1(5);"  coords="577,380,576,493,500,458,503,388,447,370,447,359" shape="poly">
+    <area target="" alt="Decke"   href="javascript:changeinfoText1(6);"  coords="0,1,1,69,65,184,408,226,413,209,423,199,435,193,436,131,428,121,430,108,442,107,449,114,448,129,443,133,442,153,442,186,445,192,468,211,793,122,793,1" shape="poly">
+    <area target="" alt="Boden"   href="javascript:changeinfoText1(7);"  coords="503,468,578,502,567,512,569,523,587,525,634,549,418,549,423,504,417,493,404,499,368,474,402,461,386,447,424,435,446,445,444,490" shape="poly">
+    <area target="" alt="Schrank" href="javascript:changeinfoText1(8);"  coords="576,282,577,495,572,516,646,549,764,548,767,295,772,282" shape="poly">
+    <area target="" alt="Matratze"href="javascript:changeinfoText1(9);"  coords="65,430,55,452,280,416,270,406,268,412,187,425,182,422,188,412,175,412,171,427,71,443,72,431" shape="poly">
+    <area target="" alt="Decke"   href="javascript:changeinfoText1(10);" coords="54,452,283,415,405,504,274,548,4,546" shape="poly">
+    <area target="" alt="Bett"    href="javascript:changeinfoText1(11);" coords="416,501,418,509,416,548,278,548" shape="poly">
+    <area target="" alt="Bett"    href="javascript:changeinfoText1(11);" coords="64,367,264,352,265,398,260,391,258,380,241,377,179,390,185,408,173,410,174,394,164,388,73,399,73,427,65,429" shape="poly">
+    <area target="" alt="Lampe"   href="javascript:changeinfoText1(1);"  coords="293,399,300,399,304,373,308,361,303,332,292,329,285,362" shape="poly">
+    <area target="" alt="Tisch"   href="javascript:changeinfoText1(12);" coords="266,396,282,415,308,432,308,414,310,434,315,415,327,413,327,444,333,448,333,407,311,392,301,392,303,396,295,398,289,388" shape="poly">
 </map>
 
 <article>
-    <h2 id="Info1">Definition</h2>
+    <h2 id="Info1" class="InfoTitle"></h2>
     <section>
-        <p id="Info2">
-            Test
+        <p id="Info2" class="InfoText">
+            Klicken sie das Bild an für Informationen
         </p>
     </section>
+    <section>
+        <p id="Info3" class="Infosource">
+            <a href="javascript:openLink(0);" id="link1"></a>
+            <a href="javascript:openLink(13);"id="link2"></a>
+        </p>
+    </section>
+    
 </article>
 <h2 id="BildKopf" class="center"> Die perfekte Schlafroutine</h2>
-    <img src="images/SleepingMan.png" width="1440" height="1000" usemap="#image-map2" class="center imageslider" alt="">
-    <map name="image-map2">
-        <area target="" alt="Musik"         href="" coords="215,855,118" shape="circle">
-        <area target="" alt="Hantel"        href="" coords="111,558,333,652" shape="rect">
-        <area target="" alt="Handy"         href="" coords="162,278,295,437" shape="rect">
-        <area target="" alt="Uhr"           href="" coords="149,39,318,183" shape="rect">
-        <area target="" alt="Badewanne"     href="" coords="1135,88,1387,211" shape="rect">
-        <area target="" alt="Schuh"         href="" coords="1131,843,1359,915" shape="rect">
-        <area target="" alt="Thermometer"   href="" coords="1152,569,1330,680" shape="rect">
-        <area target="" alt="Milch"         href="" coords="1247,315,1185,357,1187,452,1271,461,1308,414,1289,365,1297,328,1281,305" shape="poly">
-    </map>
+    <svg width="796" height="550" id="eW3gPkeZA8t1" class="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 796 550" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" >
+        <image width="796" height="550" xlink:href="images/Bubbles.png" class="svg">
+          </image>
+                    <rect width="994.729865" height="638.661788" rx="0" ry="0" transform="matrix(.810511 0 0 0.861932-5.119748 0)" fill="#00008b" stroke-width="0"/>
+                    <rect width="994.729865" height="638.661788" rx="0" ry="0" transform="matrix(.810511 0 0 0.861932-5.119748 0)" class="day" fill="#2ed4ff" stroke-width="0"/>
+                    <polygon points="0,-79.6 266.10278,-134.674865 266.10278,103.960688 -540.136717,103.477656 -540.136717,-153.872313 0,-79.6" transform="translate(535.016969 446.522344)"  fill="#107e31" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(168.665727 118.301484)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(610.721068 275)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(226.474777 453.847479)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(700.347763 452.5)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(373.638071 181.987761)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(135.842045 311.847479)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="50" ry="50" transform="translate(169.768564 118.301484)" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(425.30267 418.599906)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="71" ry="71" transform="translate(652.05638 98.224333)" fill="#d2dbed" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="translate(658.6558 71.12111)" opacity="0.79" fill="#fff" stroke-width="0"/>
+                    <line x1="0.281801" y1="-4.930042" x2="0.076211" y2="4.892234" transform="matrix(.5 0 0 1 169.279917 73.193717)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="22.880488" y1="4.892234" x2="0.076211" y2="4.892234" transform="matrix(.5 0 0 0.5 208.249562 115.855367)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="22.880488" y1="4.892234" x2="0.076211" y2="4.892234" transform="matrix(.5 0 0 0.5 119.730458 115.855367)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="17.078876" y1="12.34712" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 141.138554 78.94755)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="17.078876" y1="12.34712" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 188.696329 153.801962)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="22.880488" y1="4.892234" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 202.548493 139.391944)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="22.880488" y1="4.892234" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 124.401801 95.778216)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="26.937444" y1="-14.937346" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 122.723304 142.027808)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="-39.8" y1="0" x2="39.8" y2="0" transform="matrix(.600172 0 0 1 373.638071 181.987761)" fill="none" stroke="#2f3239" stroke-width="3"/>
+                    <line x1="19.543518" y1="-22.425346" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 136.685293 160.715118)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="22.454228" y1="-26.223434" x2="6.630334" y2="-6.923636" transform="matrix(.5 0 0 0.5 188.696329 91.197668)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="26.937444" y1="-14.937346" x2="4.195116" y2="-5.65122" transform="matrix(.5 0 0 0.5 202.14736 105.628466)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <line x1="0.438728" y1="-5.481934" x2="0.076211" y2="4.892234" transform="matrix(.5 0 0 1 169.201454 163.371442)" fill="none" stroke="#3f5787" stroke-width="3"/>
+                    <polygon points="0.042293,5.263433 6.099313,29.888295 0.401755,49.998837 -6.140113,29.959029 -6.140113,29.959029 0.042293,5.263433" transform="matrix(.848048 0.005779-.006814 0.999977 169.292728 68.570473)" stroke-width="0"/>
+                    <ellipse rx="3.122862" ry="22.012239" transform="translate(394.877138 181.987761)" fill="#ed0c0c" stroke-width="0"/>
+                    <polygon points="-100.193764,51.371568 -120.012597,55.470438 -137.302518,51.371568 -137.150096,51.371568 -120.012597,47.279804 -100.193764,51.371568" transform="translate(305.968245 66.892108)" stroke-width="0"/>
+                    <ellipse rx="3.122862" ry="22.012239" transform="translate(351.179808 181.987761)" fill="#ed0c0c" stroke-width="0"/>
+                    <line x1="0" y1="-19.915256" x2="0" y2="19.915257" transform="translate(165.541644 302.92952)" fill="#3f5787" stroke="#000" stroke-width="3"/>
+                    <line x1="0" y1="-19.915256" x2="0" y2="19.915257" transform="translate(123.638202 317.184649)" fill="#3f5787" stroke="#000" stroke-width="3"/>
+                    <line x1="2.098261" y1="-16.467385" x2="-0.159819" y2="19.953207" transform="matrix(-.271057-.962563-1.193471 0.33608 146.457053 291.910437)" fill="#3f5787" stroke="#000" stroke-width="3"/>
+                    <ellipse rx="10.498926" ry="10.5" transform="translate(156.955978 322.347479)" stroke-width="0"/>
+                    <ellipse rx="10.498926" ry="10.5" transform="translate(114.970707 337.099906)" stroke-width="0"/>
+                    <rect width="36.529279" height="71" rx="0" ry="0" transform="translate(208.287668 417)" fill="#bdbdbd" stroke-width="0"/>
+                    <rect width="34.886447" height="71" rx="0" ry="0" transform="matrix(.96453 0 0 0.956469 209.650265 418.545351)" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="2.75" ry="2.75" transform="translate(226.552307 483.704649)" fill="#b8b8b8" stroke-width="0"/>
+                    <line x1="-10.523189" y1="-13.57878" x2="10.523189" y2="13.57878" transform="translate(226.139271 438.92122)" fill="none" stroke="#910505" stroke-width="3"/>
+                    <line x1="-10.523189" y1="13.57878" x2="10.523189" y2="-13.57878" transform="translate(226.139271 438.92122)" fill="none" stroke="#910505" stroke-width="3"/>
+                    <ellipse rx="6.732202" ry="7.097481" transform="translate(418.570468 409.902519)" fill="#fff" stroke-width="0"/>
+                    <path d="M458.850507,414.756472c-9.417483.164381-9.661409,14.143176-.243854,13.974535" transform="matrix(3.000914 0.052365 0.052365 3-949.432383-862.141629)" fill="none" stroke="#fff" stroke-width="1.592"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.998573 0.05341-.05341 0.998573 653.035058 118.092969)" opacity="0.79" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.99889 0.047094-.047094 0.99889 680.911116 91.901735)" opacity="0.79" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.451352 0.02128-.020035 0.424961 681.721068 87.73585)" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.451352 0.02128-.020035 0.424961 664.152639 66.927444)" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.451352 0.02128-.020035 0.424961 658.6558 112.593346)" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.451352 0.02128-.020035 0.424961 644.906715 142.813703)" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(.451352 0.02128-.020035 0.424961 630.655716 88.033766)" opacity="0.95" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="matrix(1.000003 0 0 1 639.055041 145.975522)" opacity="0.79" fill="#fff" stroke-width="0"/>
+                    <ellipse rx="14" ry="14" transform="translate(625.802787 92.643892)" opacity="0.79" fill="#fff" stroke-width="0"/>
+                    <rect width="39.22159" height="43.888062" rx="0" ry="0" transform="translate(591.714622 259.041459)" fill="#fff" stroke-width="0"/>
+                    <a  href="javascript:changeinfoText2(0);"><ellipse rx="71" ry="71" transform="translate(168.665727 118.301484)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(1);"><ellipse rx="71" ry="71" transform="translate(610.721068 275)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(2);"><ellipse rx="71" ry="71" transform="translate(226.474777 453.847479)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(3);"><ellipse rx="71" ry="71" transform="translate(700.347763 452.5)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(4);"><ellipse rx="71" ry="71" transform="translate(373.638071 181.987761)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(5);"><ellipse rx="71" ry="71" transform="translate(135.842045 311.847479)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(6);"><ellipse rx="71" ry="71" transform="translate(425.30267 418.599906)" opacity="0.01" fill="#d2dbed" stroke-width="0"/>
+                    </a><a  href="javascript:changeinfoText2(7);"><ellipse rx="71" ry="71" transform="translate(652.05638 98.224333)" opacity="0.01" fill="#d2dbed" stroke-width="0"/></a>
+                    <ellipse rx="44.293091" ry="44.279655" transform="translate(523.918368 87.793331)" class="day" fill="#e4f43c" stroke-width="0"/>
+                    <polygon points="0,-51.477969 15.128995,-20.823276 48.958457,-15.907567 24.479229,7.953784 30.257991,41.646551 0,25.738984 -30.257991,41.646551 -24.479229,7.953784 -48.958457,-15.907567 -15.128995,-20.823276 0,-51.477969" transform="matrix(-.878165 0.478359-.478359-.878165 292.217878 87.584933)" class="night" fill="#e4f43c" stroke-width="0"/>
+                    <polygon points="0,-47.115268 13.84683,-19.058526 44.809283,-14.559419 22.404642,7.279709 27.69366,38.117053 0,23.557634 -27.69366,38.117053 -22.404642,7.279709 -44.809283,-14.559419 -13.84683,-19.058526 0,-47.115268" transform="matrix(.96896 0 0 0.910994 496.30267 200.811245)" class="night" fill="#e4f43c" stroke-width="0"/>
+                    <path d="M630.936212,275.937954c6.845007,0,10.144716,9.836808,0,10.380196" transform="matrix(2 0 0 2-630.936212-281.073038)" fill="none" stroke="#fff" stroke-width="1.592"/>
+                    <path d="M664.433135,448.08325l.261091,32.871399l70.283829.000001c1.709726-2.968751,1.715203-8.89896,0-11.860417l-40.741793-21.387248c-6.84946,9.934893-20.468081,15.213754-29.803127.376265Z" transform="translate(0 18.812827)" fill="none" stroke="#000" stroke-width="1.592"/>
+                    <path d="M664.433135,448.08325l.261091,32.871399l70.283829.000001c1.709726-2.968751,1.715203-8.89896,0-11.860417l-40.741793-21.387248c-6.84946,9.934893-20.468081,15.213754-29.803127.376265Z" transform="matrix(.95777 0.287535-.287535 0.95777 169.486329-205.241281)" fill="none" stroke="#000" stroke-width="1.592"/></svg>
+
+
+
+
+
     <article>
-        <h2 id="Info3">Definition</h2>
+        <h2 id="Info4" class="InfoTitle"></h2>
         <section>
-            <p id="Info4">
-                Test
+            <p id="Info5" class="InfoText">
+                Klicken sie das Bild an für Informationen
             </p>
         </section>
+        
     </article>
     
 
@@ -124,6 +181,7 @@
 
 
     </main>
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../JQuery/jquery.rwdImageMaps.js"></script>
     <script>
