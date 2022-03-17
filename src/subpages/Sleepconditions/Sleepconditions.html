@@ -10,6 +10,20 @@
     <link type="text/css" rel="stylesheet" href="../../globalStyle.css">
     <link type="text/css" rel="stylesheet" href="Sleepconditions.css">
     <!-- javascript -->
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+            .addEventListener('change', function() {
+              
+            var fr=new FileReader();
+            fr.onload=function(){
+                document.getElementById('output')
+                        .textContent=fr.result;
+            }
+              
+            fr.readAsText(this.files[0]);
+            
+        })
+    </script>
     <script src="Sleepconditions.js"></script>
 </head>
 

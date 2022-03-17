@@ -5,8 +5,13 @@ function changeinfoText(i)
 {   
     var el = document.getElementById("Info1");
     var el2 = document.getElementById("Info2");
-        el.textContent = TexteInfo[i];
-        el2.textContent =TexteInfo[i+13];
+    el.textContent = TexteInfo[i];
+    var file = new XMLHttpRequest();
+    el2.textContent = "te2xt";
+    const reader = new FileReader();
+    reader.readAsDataURL(Sleeptext.txt);
+    el2.textContent = text;
+        
 }
 function changeinfoText2(i)
 {   
