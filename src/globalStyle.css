@@ -223,9 +223,10 @@ footer {
     position: absolute;
     width: var(--burger-menu-size);
     height: var(--burger-menu-size);
-    padding: .5em;
+    padding: .5em !important;
     transform: translateX(-100vw);
     cursor: pointer;
+    box-sizing: initial !important;
 }
 
 #burger-menu-checkbox {
