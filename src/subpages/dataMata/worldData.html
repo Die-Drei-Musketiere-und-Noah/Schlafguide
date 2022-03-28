@@ -17,7 +17,7 @@
 </head>
 <div class="display"></div>
 
-<body>
+<body  onload="getGeolocation()">
 <header>
 
   <nav id="nav-con">
@@ -40,7 +40,7 @@
       <a class="btn1" href="../sleepQuizBliss/sleepQuiz.html" role="menuitem">Quiz</a>
       <a class="btn1" href="../kindsOfSleep/kindsOfSleep.html" role="menuitem">Arten</a>
       <a class="btn1" href="../Sleepconditions/Sleepconditions.html" role="menuitem">Voraussetzungen</a>
-      <a class="btn1" href="../noahsOrdner/index.html" role="menuitem">Schlechter Schlaf</a>
+      <a class="btn1" href="../sleepdisorderboarder/schlafstoerungen.html" role="menuitem">Schlafstörungen</a>
     </div>
 
     <div id="dark-mode-con" class="flex-center">
@@ -59,6 +59,8 @@
     können sie mit dem folgenden Tool diese überprüfen.
   </p>
   <div class="chartContainer">
+    <h4>Daten für folgende Koordinaten</h4>
+    <h4 id="cityName"></h4>
     <h3>Mond Phasen</h3>
     <canvas id="myChart" width="1600" height="900"></canvas>
     <p>0-0.5 => Zunehmender Mond</p>

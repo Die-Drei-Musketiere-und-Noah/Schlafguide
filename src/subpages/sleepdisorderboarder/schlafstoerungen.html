@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta info -->
+    <meta charset="UTF-8">
+    <title>Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon -->
+    <link type="image/svg+xml" rel="icon" href="../../favicon.svg">
+
+    <!-- css -->
+    <link type="text/css" rel="stylesheet" href="../../globalStyle.css">
+    <link type="text/css" rel="stylesheet" href="schlafstoerungen.css">
+    
+    <!-- js -->
+    <script src="../../index.js"></script>
+
+</head>
+
+<body id="body">
+
+    <header>
+
+        <nav id="nav-con">
+            
+            <label id="burger-menu-con" class="header-transition flex-center" aria-label="mobile navigation">
+                <input id="burger-menu-checkbox" type="checkbox">
+                <div id="burger-menu">
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="burger-menu-background">
+                </div>
+
+            </label>
+
+            <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
+                <a class="btn1" href="../../index.html" role="menuitem">Home</a>
+                <a class="btn1" href="../dataMata/worldData.html" role="menuitem">Mond</a>
+                <a class="btn1" href="../sleepQuizBliss/sleepQuiz.html" role="menuitem">Quiz</a>
+                <a class="btn1" href="../kindsOfSleep/kindsOfSleep.html" role="menuitem">Arten</a>
+                <a class="btn1" href="../Sleepconditions/Sleepconditions.html" role="menuitem">Voraussetzungen</a>
+                <a class="btn1" href="../sleepdisorderboarder/schlafstoerungen.html" role="menuitem">Schlafstörungen</a>
+            </div>
+
+            <div id="dark-mode-con" class="flex-center">
+                <input type="checkbox" id="dark-mode-checkbox">
+                <label id="dark-mode-toggle" for="dark-mode-checkbox">
+                    <div id="dark-mode-ball" ></div>
+                </label>
+            </div>
+
+        </nav>
+    
+    </header>
+
+    <main id="content" role="main" aria-label="main content">
+
+        <section class="section">
+            <div class="title">
+                <h2>Schlafstörungen</h2>
+                <p><strong>Definition:</strong> Schlafstörungen (Insomnie) äußern sich entweder in dem Gefühl, schlecht ein- oder durchzuschlafen, oder aber in dem Gefühl, 
+                    tagsüber vermehrt müde zu sein, wobei natürlich beide Beschwerdekomplexe gleichzeitig auftreten können. Schlafstörungen gehören zu den häufigsten gesundheitlichen Problemen überhaupt und betreffen mindestens 10% der Bevölkerung.</p>
+            </div>
+
+            <div class="definition-center section-center">
+                <article class="definition-img active" id="UrsachenImg">
+                    <img src="../kindsOfSleep/img/bad-sleep.jpg" alt="Ursachen pic">
+                </article>
+                <article class="definition-img" id="BeschwerdenImg">
+                    <img src="../kindsOfSleep/img/kreislaufschlaf.jpg" alt="Beschwerden pic">
+                </article>
+                <article class="definition-img" id="BehandlungImg">
+                    <img src="../kindsOfSleep/img/behandlung.jpg" alt="Behandlung pic">
+                </article>
+                <article class="definition">
+                    <div class="btn-container">
+                        <button class="tab-btn active" data-id="Ursachen">Ursachen</button>
+                        <button class="tab-btn" data-id="Beschwerden">Beschwerden</button>
+                        <button class="tab-btn" data-id="Behandlung">Behandlung</button>
+                    </div>  
+                    <article class="definition-content">
+                        <div class="content active" id="Ursachen">
+                            <h4>Ursachen</h4>
+                            <ul>
+                                <li>- Psychatrische Erkrankungen</li>
+                                <li>- Gehirnerkrankungen</li>
+                                <li>- Nächtliche Atmungsstörungen</li>
+                                <li>- Drogen und Medikamente</li>
+                                <li>- Schlafumgebung und -gewohnheiten</li>
+                                <li>- Psychosoziale Probleme</li>
+                            </ul>
+                        </div>
+                        <div class="content" id="Beschwerden">
+                            <h4>Beschwerden</h4>
+                            <p>Weitgehend unabhängig von der Ursache der Schlafstörung kann man zwei verschiedene Beschwerdebilder unterscheiden. 
+                                Beim einen stehen ganz im Vordergrund Beschwerden, die den Schlaf selbst betreffen: Hierzu gehören Ein- und Durchschlafstörungen, 
+                                sowie das Gefühl einer verminderten Erholsamkeit des Schlafes. Zusätzlich können nächtliche Unruhe, Schwitzen und Alpträume auftreten. 
+                                Beim zweiten Beschwerdetyp liegt der Schwerpunkt am Tage: Patienten klagen über Erschöpftheit, Müdigkeit, ständiges Schläfrigkeitsgefühl, 
+                                Nervosität, verminderte Konzentration und vermindertes Durchhaltevermögen. Beide Typen von Beschwerden können auch gemeinsam auftreten 
+                                und lassen keinen sicheren Schluss auf die Ursache der Schlafstörung zu.</p>
+                        </div>
+                        <div class="content" id="Behandlung">
+                            <h4>Behandlung</h4>
+                            <p>Die Behandlung von Schlafstörungen richtet sich immer nach ihrer Ursache. 
+                                Liegen organische Erkrankungen wie z.B. ein Schlafapnoe-Syndrom oder psychische Störungen vor, 
+                                so müssen zuerst diese vom entsprechenden Facharzt behandelt werden.
+                                Aufklärung und Beratung über Schlafstörungen sind die Grundlagen einer Behandlung. 
+                                Diese umfasst ein Gespräch über den normalen, altersentsprechenden Schlaf und individuelle Schwankungen sowie schlafbezogene Ängste. 
+                                Mit einer Reihe von Maßnahmen (Schlafhygiene) können Betroffene den Weg zu einem besseren und erholsameren Schlaf selbst bereiten:</p>
+
+                            <ul><strong>
+                                <li>- geregelte Schlafzeiten</li>
+                                <li>- generell nur bei Müdigkeit ins Bett gehen</li>
+                                <li>- ein ruhiger, abgedunkelter, mit 15-18 °C temperierter Schlafraum</li>
+                                <li>- ein angenehmes „Zu-Bett-Geh-Ritual".</li>
+                                </strong>
+                            </ul>
+                            <p><br> Alle schlafstörenden Faktoren wie langes Aufbleiben 
+                                und anregende Genussmittel (Kaffee, Schwarztee, Energie-Drinks) in den Nachmittagsstunden sowie spätabendliches 
+                                Essen sollten nach Möglichkeit reduziert werden.</p>
+                            
+                        </div>
+                        
+                    </article>                      
+                </article>     
+            </div>
+        </section>
+        <script src="schlafstoerungen.js"></script>
+    </main>
+
+    <footer id="footer" class="flex-center">
+
+        <div id="imprint" class="flex-center">
+            <a href="../../imprint.html">Impressum und Datenschutz</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

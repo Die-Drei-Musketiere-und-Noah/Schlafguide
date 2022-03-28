@@ -1,14 +1,13 @@
 
 h2{
     text-align: center;
-    font-size: 3.34vw;
+    font-size: 30px;
 }
 .InfoTitle{
-    font-size: 3.34vw;
+    font-size: 30px;
     
 }
 .InfoText{
-    font-size: 2.2vw;
     
 }
 .svg{
@@ -17,7 +16,7 @@ h2{
     height: auto;
     width: auto;
     max-width: 100%;
-    margin-bottom: 7px;
+    
 }
 .Infosource{
     font-size: 1.4vw;
@@ -34,5 +33,5 @@ img[usemap] {
     height: auto;
     width: auto;
     max-width: 100%;
-    margin-bottom: 7px;
+    
 }

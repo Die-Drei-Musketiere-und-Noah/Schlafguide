@@ -40,7 +40,7 @@ function openLink(i){
 function TimeImageEditor(){
     var today = new Date();
     var time = today.getHours()
-    if(time<7 ||time<20){
+    if(time<7 ||time>20){
         var elements = document.getElementsByClassName("day");
         for(var i = 0; i < elements.length; i++) {
             elements[i].style.display = "none";

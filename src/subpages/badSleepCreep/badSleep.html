@@ -18,22 +18,36 @@
     <header>
 
         <nav id="nav-con">
-            
-            <div id="burger-menu-con" class="flex-center header-transition" role="navigation" aria-label="mobile navigation">
-                <div class="burger-menu-line"></div>
-                <div class="burger-menu-line"></div>
-                <div class="burger-menu-line"></div>
-            </div>
+
+            <label id="burger-menu-con" class="header-transition flex-center" aria-label="mobile navigation">
+                <input id="burger-menu-checkbox" type="checkbox">
+                <div id="burger-menu">
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <div id="burger-menu-background">
+                </div>
+
+            </label>
 
             <div id="links" class="header-transition" role="navigation" aria-label="desktop navigation">
                 <a class="btn1" href="../../index.html" role="menuitem">Home</a>
-                <a class="btn1" href="#" role="menuitem">About</a>
-                <a class="btn1" href="#" role="menuitem">Bad Sleep</a>
-                <a class="btn1" href="#" role="menuitem">Contact</a>
+                <a class="btn1" href="../dataMata/worldData.html" role="menuitem">Mond</a>
+                <a class="btn1" href="../sleepQuizBliss/sleepQuiz.html" role="menuitem">Quiz</a>
+                <a class="btn1" href="../kindsOfSleep/kindsOfSleep.html" role="menuitem">Arten</a>
+                <a class="btn1" href="../Sleepconditions/Sleepconditions.html" role="menuitem">Voraussetzungen</a>
+                <a class="btn1" href="../sleepdisorderboarder/schlafstoerungen.html" role="menuitem">Schlafstörungen</a>
+            </div>
+
+            <div id="dark-mode-con" class="flex-center">
+                <input type="checkbox" id="dark-mode-checkbox">
+                <label id="dark-mode-toggle" for="dark-mode-checkbox">
+                    <div id="dark-mode-ball" ></div>
+                </label>
             </div>
 
         </nav>
-    
     </header>
 
     <main id="content" role="main" aria-label="main content">
