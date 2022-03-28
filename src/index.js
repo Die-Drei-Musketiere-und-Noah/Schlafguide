@@ -75,7 +75,6 @@ function checkDarkMode() {
  */
 window.addEventListener('load', function() {
 
-    
     //check for darkmode
     checkDarkMode();
 
