@@ -1,5 +1,3 @@
-//constants
-
 //json files
 const QUESTION_JSON = "questions.json",
 SCORE_MESSAGES_JSON = "scoreMessages.json";
@@ -18,7 +16,6 @@ SCORE_MSG = "Ihre Puntkzahl ist: ";
 
 //event types
 const CLICK_EVENT = 'click';
-
 
 //loaded from json
 window.questions = [];
@@ -116,7 +113,7 @@ function showResults() {
 }
 
 /**
- * Loads the questions and score messages
+ * Loads the questions and score messages using js promises
  */
 function loadResources(){
     Promise.all([
