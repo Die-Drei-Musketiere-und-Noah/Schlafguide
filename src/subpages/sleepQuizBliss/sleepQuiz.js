@@ -1,6 +1,6 @@
 //json files
-const QUESTION_JSON = "questions.json",
-SCORE_MESSAGES_JSON = "scoreMessages.json";
+const QUESTION_JSON = "json/questions.json",
+SCORE_MESSAGES_JSON = "json/scoreMessages.json";
 
 //html ids
 const QUIZ_QUESTIONS = 'quiz-questions',
