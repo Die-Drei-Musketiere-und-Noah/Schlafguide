@@ -1,13 +1,4 @@
-:root {
-    --background: rgb(255, 250, 240);
-    --lightblue: rgb(157, 177, 180);
-    --darkblue:rgb(29,35,88);
-    --btn1-hover-bg-color: rgb(49, 55, 56);
-    --btn1-font-size: 2em;
-    --btn1-color: black;
-    --btn1-hover-color: white;
-    
-}
+
 h2{
     text-align: center;
     font-size: 3.34vw;
@@ -44,7 +35,4 @@ img[usemap] {
     width: auto;
     max-width: 100%;
     margin-bottom: 7px;
-}
-area {
-    outline: 5px solid var(--red);
 }
