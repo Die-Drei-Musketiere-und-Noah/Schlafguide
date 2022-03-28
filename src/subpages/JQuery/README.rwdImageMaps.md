@@ -24,7 +24,7 @@ $(document).ready(function(e) {
 ```
 
 #### Demo:
-https://studentdhbwheidenheimde-my.sharepoint.com/:p:/g/personal/bockd_tin21_student_dhbw-heidenheim_de/EervSbARBvlKoav1ze2zgkgBnms4o-Y63dyTp7ioyT2Q5Q?email=Damian.Bock%40bosch.com&e=CsZ815
+
 http://mattstow.com/experiment/responsive-image-maps/rwd-image-maps.html
 
 ---

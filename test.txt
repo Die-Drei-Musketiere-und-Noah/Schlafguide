@@ -1,1 +1,64 @@
-Test
+ist-ein(fahrzeug).
+ist-ein(lastkraftwagen,fahrzeug).
+ist-ein(personenkraftwagen,fahrzeug).
+ist-ein(bus,personenkraftwagen).
+ist-ein(motorrad,personenkraftwagen).
+ist-ein(auto, personenkraftwagen).
+ist-ein(limousine,auto).
+ist-ein(kombi,auto).
+ist-ein(sportwagen,auto).
+ist-ein(coupe,sportwagen).
+ist-ein(cabriolet,sportwagen).
+
+
+
+uebergeordnet(Knoten,X):-
+    ist-ein(Knoten, X).
+              
+% A3
+              
+untergeordnet(Knoten, Y):-
+    ist-ein(Y, Knoten).
+             
+untergeordnet(Knoten, Y):-
+    ist-ein(X, Knoten),
+    untergeordnet(X, Y).
+    
+% A4
+alleuntergeordneten(Knoten, Alle):-
+    (ist-ein(Knoten); ist-ein(Knoten,_)),findall(Y,untergeordnet(Knoten,Y),Alle).
+
+% A5
+
+sortierunguntergeordneten(Knoten, Sorted):-
+	alleuntergeordneten(Knoten,Alle),
+	sort(Alle, Sorted).
+	
+% A6
+
+ausgabesortiert(Knoten):-
+	sortierunguntergeordneten(Knoten, Sorted),
+	forall(member(X, Sorted),
+	(write("untergeordneter Knoten: ' "),
+	write(X),
+    write(" '"),
+    nl)).
+
+% A7
+
+user_input(Knoten):-
+	writeln("Bitte geben Sie einen Knoten an: "),
+	read(Knoten).
+	
+programm:-
+	user_input(Knoten),
+	uebergeordnet(Knoten,Uebergeordneter_Knoten),
+	write("uebergeordneter Knoten: "),
+	write(Uebergeordneter_Knoten), nl, 
+	ausgabesortiert(Knoten).
+	nummer([
+
+nummer(Zahl):-
+    forall(member(X,Zahl),
+    (Sum = Sum +X),
+    nl,write(Sum).
